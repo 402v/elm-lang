@@ -1,0 +1,6 @@
+framework module Pods_ElmLang {
+  umbrella header "Pods-ElmLang-umbrella.h"
+
+  export *
+  module * { export * }
+}

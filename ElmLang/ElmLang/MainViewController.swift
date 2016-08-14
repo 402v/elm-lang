@@ -14,8 +14,8 @@ class MainViewController: UIViewController {
     let pageHelper = PageHelper()
 
     @IBAction func buttonClicked(sender: UIButton) {
-
-//        self.performSegue(withIdentifier: "GetStartedIdentifier", sender: self)
+//        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+//        appdelegate.shouldSupportAllOrientation = true
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -23,10 +23,37 @@ class MainViewController: UIViewController {
         let title = button.titleLabel?.text
         let url = self.pageHelper.pageURL(title: title, pageList: self.pageList!)
 
-        let elmVC = segue.destination as! ElmViewController
-        elmVC.url = url
+        switch segue.identifier! {
+        case "GetStartedIdentifier":
+            let elmVC = segue.destination as! ElmViewController
+            elmVC.url = url
+            break
+        case "PocketIdentifier":
+            _ = segue.destination as! PocketViewController
+            break
+        case "PlaygroundsIdentifier":
+            let replVC = segue.destination as! ReplViewController
+            replVC.url = url
+            break
+        case "ExamplesIdentifier":
+            let replVC = segue.destination as! ReplViewController
+            replVC.url = url
+            break
+        default:
+            break
+        }
     }
 
+    // MARK: - Rotate
+    override var shouldAutorotate: Bool {
+        return false
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

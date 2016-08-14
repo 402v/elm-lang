@@ -13,6 +13,14 @@
 		CB921B301D5F98DC008C025E /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B2F1D5F98DC008C025E /* Page.swift */; };
 		CB921B341D601698008C025E /* ElmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B331D601698008C025E /* ElmViewController.swift */; };
 		CB921B361D601D9A008C025E /* PageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B351D601D9A008C025E /* PageHelper.swift */; };
+		CB921B381D6039C8008C025E /* PocketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B371D6039C8008C025E /* PocketViewController.swift */; };
+		CB921B3A1D603AD6008C025E /* ReplViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B391D603AD6008C025E /* ReplViewController.swift */; };
+		CB921B3C1D60B909008C025E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B3B1D60B909008C025E /* WebViewController.swift */; };
+		CB921B3E1D60C622008C025E /* PocketHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B3D1D60C622008C025E /* PocketHelper.swift */; };
+		CB921B401D60C62A008C025E /* ShareHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B3F1D60C62A008C025E /* ShareHelper.swift */; };
+		CB921B421D60D2DC008C025E /* Penny.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B411D60D2DC008C025E /* Penny.swift */; };
+		CB921B441D60D58B008C025E /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B431D60D58B008C025E /* FileHelper.swift */; };
+		CB921B481D60E5CD008C025E /* Objective-C.m in Sources */ = {isa = PBXBuildFile; fileRef = CB921B471D60E5CD008C025E /* Objective-C.m */; };
 		CBD52F811D5F804100ED3BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD52F801D5F804100ED3BB6 /* AppDelegate.swift */; };
 		CBD52F831D5F804100ED3BB6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD52F821D5F804100ED3BB6 /* MainViewController.swift */; };
 		CBD52F861D5F804100ED3BB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD52F841D5F804100ED3BB6 /* Main.storyboard */; };
@@ -52,6 +60,15 @@
 		CB921B2F1D5F98DC008C025E /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		CB921B331D601698008C025E /* ElmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElmViewController.swift; sourceTree = "<group>"; };
 		CB921B351D601D9A008C025E /* PageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageHelper.swift; sourceTree = "<group>"; };
+		CB921B371D6039C8008C025E /* PocketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketViewController.swift; sourceTree = "<group>"; };
+		CB921B391D603AD6008C025E /* ReplViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplViewController.swift; sourceTree = "<group>"; };
+		CB921B3B1D60B909008C025E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		CB921B3D1D60C622008C025E /* PocketHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketHelper.swift; sourceTree = "<group>"; };
+		CB921B3F1D60C62A008C025E /* ShareHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareHelper.swift; sourceTree = "<group>"; };
+		CB921B411D60D2DC008C025E /* Penny.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Penny.swift; sourceTree = "<group>"; };
+		CB921B431D60D58B008C025E /* FileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
+		CB921B461D60E5CD008C025E /* ElmLang-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ElmLang-Bridging-Header.h"; sourceTree = "<group>"; };
+		CB921B471D60E5CD008C025E /* Objective-C.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Objective-C.m"; sourceTree = "<group>"; };
 		CBD52F7D1D5F804100ED3BB6 /* ElmLang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElmLang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD52F801D5F804100ED3BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBD52F821D5F804100ED3BB6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				CB921B2F1D5F98DC008C025E /* Page.swift */,
+				CB921B411D60D2DC008C025E /* Penny.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -122,8 +140,20 @@
 			isa = PBXGroup;
 			children = (
 				CB921B331D601698008C025E /* ElmViewController.swift */,
+				CB921B371D6039C8008C025E /* PocketViewController.swift */,
+				CB921B391D603AD6008C025E /* ReplViewController.swift */,
+				CB921B3B1D60B909008C025E /* WebViewController.swift */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		CB921B451D60E59A008C025E /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				CB921B471D60E5CD008C025E /* Objective-C.m */,
+				CB921B461D60E5CD008C025E /* ElmLang-Bridging-Header.h */,
+			);
+			path = Bridge;
 			sourceTree = "<group>";
 		};
 		CBD52F741D5F804100ED3BB6 = {
@@ -151,6 +181,7 @@
 		CBD52F7F1D5F804100ED3BB6 /* ElmLang */ = {
 			isa = PBXGroup;
 			children = (
+				CB921B451D60E59A008C025E /* Bridge */,
 				CB921B321D601678008C025E /* view */,
 				CB921B311D5F98E2008C025E /* models */,
 				CBD52FAE1D5F827B00ED3BB6 /* controllers */,
@@ -187,6 +218,9 @@
 			children = (
 				CB921B2D1D5F9124008C025E /* NetworkHelper.swift */,
 				CB921B351D601D9A008C025E /* PageHelper.swift */,
+				CB921B3D1D60C622008C025E /* PocketHelper.swift */,
+				CB921B3F1D60C62A008C025E /* ShareHelper.swift */,
+				CB921B431D60D58B008C025E /* FileHelper.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -473,9 +507,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD52F831D5F804100ED3BB6 /* MainViewController.swift in Sources */,
+				CB921B3C1D60B909008C025E /* WebViewController.swift in Sources */,
 				CB921B2E1D5F9124008C025E /* NetworkHelper.swift in Sources */,
+				CB921B381D6039C8008C025E /* PocketViewController.swift in Sources */,
+				CB921B441D60D58B008C025E /* FileHelper.swift in Sources */,
+				CB921B421D60D2DC008C025E /* Penny.swift in Sources */,
 				CB921B361D601D9A008C025E /* PageHelper.swift in Sources */,
+				CB921B481D60E5CD008C025E /* Objective-C.m in Sources */,
 				CB921B301D5F98DC008C025E /* Page.swift in Sources */,
+				CB921B3A1D603AD6008C025E /* ReplViewController.swift in Sources */,
+				CB921B401D60C62A008C025E /* ShareHelper.swift in Sources */,
+				CB921B3E1D60C622008C025E /* PocketHelper.swift in Sources */,
 				CBD52F811D5F804100ED3BB6 /* AppDelegate.swift in Sources */,
 				CB921B341D601698008C025E /* ElmViewController.swift in Sources */,
 			);
@@ -630,12 +672,15 @@
 			baseConfigurationReference = EC699B2259A238745E027E88 /* Pods-ElmLang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 224G3733ES;
 				INFOPLIST_FILE = ElmLang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.402v.ElmLang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ElmLang/Bridge/ElmLang-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -645,12 +690,14 @@
 			baseConfigurationReference = 1DDE4ECB40A1DA7104F1B336 /* Pods-ElmLang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 224G3733ES;
 				INFOPLIST_FILE = ElmLang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.402v.ElmLang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ElmLang/Bridge/ElmLang-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -48,8 +48,10 @@ class PageHelper: NSObject {
         case "Pocket":
             break
         case "Playgrounds":
+            url = pageList["playgrounds"]!.location
             break
         case "Examples":
+            url = pageList["examples"]!.location
             break
         default:
             print("wrong button title!")
@@ -57,5 +59,11 @@ class PageHelper: NSObject {
         }
 
         return url
+    }
+}
+
+extension URL {
+    func sameSubdomain(with url: URL) -> Bool {
+        return self.host == url.host
     }
 }

@@ -45,6 +45,8 @@
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
+		<key>NSPhotoLibraryUsageDescription</key>
+		<string>We will use your photo library to save image.</string>
 	</dict>
 </dict>
 </plist>

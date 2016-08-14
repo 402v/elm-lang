@@ -13,7 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    // MARK: - Rotate
+    var shouldSupportAllOrientation = false
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        if (shouldSupportAllOrientation == true){
+            return UIInterfaceOrientationMask.all
+        }
+        return UI_USER_INTERFACE_IDIOM() == .pad ? UIInterfaceOrientationMask.landscape : UIInterfaceOrientationMask.portrait
+    }
 
+    // MARK: - delegate
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         return true

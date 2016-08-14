@@ -15,12 +15,20 @@ class FileHelper: NSObject {
 //        let encodeURLStr = url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlFragmentAllowed)
         let pocketFilePath = pocketRootPath.appending("/\(url.md5())")
 
-        if FileManager.default.fileExists(atPath: pocketFilePath) {
-            try! FileManager.default.removeItem(atPath: pocketFilePath)
-        }
+//        if FileManager.default.fileExists(atPath: pocketFilePath) {
+//            try! FileManager.default.removeItem(atPath: pocketFilePath)
+//        }
 
 //        let createSuccess = FileManager.default.createFile(atPath: pocketFilePath, contents: nil, attributes: nil)
 //        print("create file \(pocketFilePath) success:\(createSuccess)")
+
+        return pocketFilePath
+    }
+
+    func elmPocketFilePath(md5: String) -> String {
+        let pocketRootPath = self.elmPocketRootPath()
+
+        let pocketFilePath = pocketRootPath.appending("/\(md5)")
 
         return pocketFilePath
     }

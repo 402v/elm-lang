@@ -12,8 +12,8 @@ class PocketHelper: NSObject {
 
     let fileHelper = FileHelper()
 
-    func pocket(url: URL) -> Bool {
-        let penny = Penny(url: url, createAt: Date())
+    func pocket(title: String, url: URL) -> Bool {
+        let penny = Penny(title: title, url: url, createAt: Date())
         let filePath = fileHelper.elmPocketFilePath(url: url.absoluteString)
 
         return NSKeyedArchiver.archiveRootObject(penny, toFile: filePath)
@@ -23,9 +23,11 @@ class PocketHelper: NSObject {
         let pocketFileList = fileHelper.elmPocketFiles()
 
         var pennyList: [Penny] = Array()
-        for pocketFile in pocketFileList {
-            let penny = NSKeyedUnarchiver.unarchiveObject(withFile: pocketFile) as! Penny
-            pennyList.append(penny)
+        for pocketFileName in pocketFileList {
+            let pocketFilePath = fileHelper.elmPocketFilePath(md5: pocketFileName)
+            let penny = NSKeyedUnarchiver.unarchiveObject(withFile: pocketFilePath)
+            print("penny:\(penny)")
+            pennyList.append(penny as! Penny)
         }
         return pennyList
     }

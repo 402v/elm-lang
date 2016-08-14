@@ -67,3 +67,9 @@ extension URL {
         return self.host == url.host
     }
 }
+
+extension UIWebView {
+    func title() -> String? {
+        return self.stringByEvaluatingJavaScript(from: "document.title")
+    }
+}

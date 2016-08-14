@@ -33,7 +33,7 @@ class ElmViewController: UIViewController, UIWebViewDelegate {
     }
 
     @IBAction func pocket() {
-        let result = PocketHelper().pocket(url: self.url!)
+        let result = PocketHelper().pocket(title: self.navigationItem.title!, url: self.url!)
         print("pocket result: \(result)")
     }
 
@@ -66,6 +66,10 @@ class ElmViewController: UIViewController, UIWebViewDelegate {
         }
 
         return sameDomain!
+    }
+
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        self.navigationItem.title = webView.title()
     }
 
     // MARK: - Lifecycle

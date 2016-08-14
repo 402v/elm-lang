@@ -1,895 +1,1549 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		12F7A397CDAB4CB45A50E6EDB1BD6A5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		13E39355B9B2F07FC6619E46E2488EB9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676E94F46DCFECE10AC16E2D389665C4 /* Result.swift */; };
-		1494389C8E30F964D52FC95176FBAC1D /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB7EB1B0579A4903F3C12D7E121A2AD /* TaskDelegate.swift */; };
-		1A4334A1C7B6504797DA6453FE814CB0 /* Pods-ElmLang-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E315E02BF06E8272C09F3729D3A07A /* Pods-ElmLang-dummy.m */; };
-		38FD65F98DC17A7B6FB3D7BAD8D1BA6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF96950B65F8F4A61A152EB5908128F /* Timeline.swift */; };
-		3FC608FC88CDA077F29912E176F70EA4 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 624838A6B51DCD19C03E9CE510C87F21 /* Alamofire-dummy.m */; };
-		44F4D67257052A4EED6D1CD59B6DBB3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		46728820CED688E13C9FBBEFF4D4B296 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		4C4D859A3DF35B6D7DE08509AA808675 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1778564B25073607098B2071DB1A21A9 /* SessionManager.swift */; };
-		5226DCAD7A66B91FED757730B36792A9 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F26F0284B110881CFFA4E0C608ABB0 /* Alamofire.swift */; };
-		5A3016D5EC8C68BC6FCF0ECC754660A8 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E561C9591507708B1619612C25F4FB3D /* NetworkReachabilityManager.swift */; };
-		602B3B0619476BB04CBF2FDD592ACBA2 /* Pods-ElmLang-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D597C6EA5955F6F5F7FE281102A698B6 /* Pods-ElmLang-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6568C0453237BC5DB5DE272D993AEC6A /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB65DCDBF1E12EED16DF533B7F79F08 /* Notifications.swift */; };
-		7F9B0FD02463DA4FFCA278AA344636BB /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0404A3D2880BBE789D29EC90AB97A631 /* MultipartFormData.swift */; };
-		890C421F2AE399D7D782F0461B1B1D99 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9BE871E0622966E4DD0AE5A05F5D0E /* SessionDelegate.swift */; };
-		8A6F7B6001BE32A63AB83D6E1E768023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		915D1CB5DE3E540EE1DCB5171243A30B /* Pods-ElmLangTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E0DE7310699521EE4A0D617B7B3419E /* Pods-ElmLangTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		979EA8B947835363DB0BB31DEA46ED18 /* Pods-ElmLangUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8881A867C8F83823CF90A0B5AB83FE /* Pods-ElmLangUITests-dummy.m */; };
-		989E76EA7F66D2703BE7C4D8C4D491FE /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0866F057FF5EF472EDDB0FD5FB14321D /* ServerTrustPolicy.swift */; };
-		9F2748FA7E1EC90E940FD13B80A74C3C /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EF0E1E0F02663B670AEDC2616B3FCA /* ResponseSerialization.swift */; };
-		A3C1B5E525CF0D4453FFB9725BDBC933 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09294ED953CE756DAD9ED2283D7C71A5 /* ParameterEncoding.swift */; };
-		B7674E283F8230D4208895AF8C57822E /* Pods-ElmLangUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0915F6512F10D6F7586F93792784F0E4 /* Pods-ElmLangUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C34F209E7E5BE856F1DF50F470304424 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C3D02A325F7FFB04BA27A258C5A12A36 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC7F234B388263547F80F7C55ECB76EE /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AEFF4DAB154FEFB6B2E950AA0DB231 /* Validation.swift */; };
-		CCBDEF648407AB84FE6B382966E05F2A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4ADE1F9EDCF5611AD8CFC55FA41D02 /* Response.swift */; };
-		D67864E5460881F10A06588277432BBA /* Pods-ElmLangTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AC287C45AFF4434DDEAF754FA14531 /* Pods-ElmLangTests-dummy.m */; };
-		F4211E93D60755D2AA87E19C58D466F5 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B519D43AB1A12570DA50BEA3287FBE /* Request.swift */; };
-		FAE4D3C78B20FCC3757437B895901EF4 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B4FDA709BAB18C78AC35D8482F822 /* Error.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1CE3F2C5D570E99040F3C5A749C4CCFA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B6F52488EC10931E5A24414ECAE1BD4;
-			remoteInfo = Alamofire;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		0404A3D2880BBE789D29EC90AB97A631 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		0866F057FF5EF472EDDB0FD5FB14321D /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		0915F6512F10D6F7586F93792784F0E4 /* Pods-ElmLangUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ElmLangUITests-umbrella.h"; sourceTree = "<group>"; };
-		09294ED953CE756DAD9ED2283D7C71A5 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		0A9BE871E0622966E4DD0AE5A05F5D0E /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		0E99089E1E3062DD2D62F6594830BC5F /* Pods-ElmLangTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ElmLangTests.debug.xcconfig"; sourceTree = "<group>"; };
-		12F26F0284B110881CFFA4E0C608ABB0 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		14E315E02BF06E8272C09F3729D3A07A /* Pods-ElmLang-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ElmLang-dummy.m"; sourceTree = "<group>"; };
-		1778564B25073607098B2071DB1A21A9 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		1EDC6AF1D8DA8291192255462FC92AA2 /* Pods-ElmLangTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ElmLangTests.release.xcconfig"; sourceTree = "<group>"; };
-		352EA1961AA9D51279B98584051F93FC /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4542920D25E667DAA3615085CA8ECFD4 /* Pods-ElmLangTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ElmLangTests-frameworks.sh"; sourceTree = "<group>"; };
-		4682FDAE2151339A8AD450463B2D2030 /* Pods_ElmLangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElmLangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46847333D20A6E291540516BF4CB0188 /* Pods-ElmLangTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ElmLangTests.modulemap"; sourceTree = "<group>"; };
-		46C8493DD5B4ED8FB56AF16015E03D79 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		47E8D5DC75DE4E7B92937034942E567F /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		48F077EB6659957E0FDBB960B40E263E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A67D26E8CCE454AC7450D64E55920DE /* Pods-ElmLangTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ElmLangTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4F5EF6EEEB90792486EC8993D0377393 /* Pods-ElmLangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ElmLangUITests.release.xcconfig"; sourceTree = "<group>"; };
-		57EF0E1E0F02663B670AEDC2616B3FCA /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		624838A6B51DCD19C03E9CE510C87F21 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		64AC287C45AFF4434DDEAF754FA14531 /* Pods-ElmLangTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ElmLangTests-dummy.m"; sourceTree = "<group>"; };
-		65304D92631C858C389991A76B67C786 /* Pods_ElmLang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElmLang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		676E94F46DCFECE10AC16E2D389665C4 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		6B56A704F1893A64DC9DB0446E4789FA /* Pods-ElmLang-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ElmLang-resources.sh"; sourceTree = "<group>"; };
-		707A9A145D57B7373F29B58E378C6CDB /* Pods-ElmLang.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ElmLang.modulemap"; sourceTree = "<group>"; };
-		787C111C0B054159EAAB6771C6C747AE /* Pods-ElmLangTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ElmLangTests-resources.sh"; sourceTree = "<group>"; };
-		78BB669E2271B8C164B3AA0157BD8FD7 /* Pods-ElmLangTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ElmLangTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		7E0DE7310699521EE4A0D617B7B3419E /* Pods-ElmLangTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ElmLangTests-umbrella.h"; sourceTree = "<group>"; };
-		7E4ADE1F9EDCF5611AD8CFC55FA41D02 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		85E300D195C1F30CE5C204442A9CF727 /* Pods_ElmLangUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElmLangUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		89B519D43AB1A12570DA50BEA3287FBE /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		8A8881A867C8F83823CF90A0B5AB83FE /* Pods-ElmLangUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ElmLangUITests-dummy.m"; sourceTree = "<group>"; };
-		8AB65DCDBF1E12EED16DF533B7F79F08 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9874EF2E1AD419D5FB420BB09C6771F8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9DD5E7B237F002665948EBE9F58D9BB7 /* Pods-ElmLangUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ElmLangUITests-resources.sh"; sourceTree = "<group>"; };
-		AFB7EB1B0579A4903F3C12D7E121A2AD /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		B7C87F851AD4CE86B20115C9E2CECDED /* Pods-ElmLang-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ElmLang-frameworks.sh"; sourceTree = "<group>"; };
-		C01B4FDA709BAB18C78AC35D8482F822 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
-		C3D02A325F7FFB04BA27A258C5A12A36 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		C4F49E4E434FFC9454DAFF068BC2DF3F /* Pods-ElmLang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ElmLang.debug.xcconfig"; sourceTree = "<group>"; };
-		C67638AEEA92AA49E690098BD8B7398C /* Pods-ElmLangUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ElmLangUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D597C6EA5955F6F5F7FE281102A698B6 /* Pods-ElmLang-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ElmLang-umbrella.h"; sourceTree = "<group>"; };
-		D68EA434D63F104A1DE586F9C2212B03 /* Pods-ElmLangUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ElmLangUITests.modulemap"; sourceTree = "<group>"; };
-		D6D458F5B55B33275B7B00F8D466FA45 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		D96DD6E721E52C43CD2805114C8F4B5E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCF96950B65F8F4A61A152EB5908128F /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		E1FF2C565263FC735E8AE0E024322131 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E561C9591507708B1619612C25F4FB3D /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		E59C719BC9153C11CF68501AD3A36A77 /* Pods-ElmLang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ElmLang.release.xcconfig"; sourceTree = "<group>"; };
-		E5AEFF4DAB154FEFB6B2E950AA0DB231 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
-		E60C976BEFE2B09534F024913CE3D1EC /* Pods-ElmLangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ElmLangUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		EAB86F94DB74918B46587378CF1AD601 /* Pods-ElmLang-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ElmLang-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EDA27ECBD21DC3D1D6C03566100AEA90 /* Pods-ElmLangUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ElmLangUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F2D8A93E2604FBFE8CF36BD1892AA699 /* Pods-ElmLangUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ElmLangUITests-frameworks.sh"; sourceTree = "<group>"; };
-		F9B3DBA0B98B9EFBEC60815657BD1A1C /* Pods-ElmLang-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ElmLang-acknowledgements.plist"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		248AD5933905F8D5BAD3A522FE2B725E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8A6F7B6001BE32A63AB83D6E1E768023 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4A4B62F0D8B04237C326E5E56CA7BBBA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				12F7A397CDAB4CB45A50E6EDB1BD6A5E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C11DBDDB0569CE5B28AFA6B37AC709D2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46728820CED688E13C9FBBEFF4D4B296 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FED6EDB99D42D9AF373285A7A75AA564 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				44F4D67257052A4EED6D1CD59B6DBB3E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		03240CB9B0806FAD103E0F82755F35D7 /* Pods-ElmLangUITests */ = {
-			isa = PBXGroup;
-			children = (
-				48F077EB6659957E0FDBB960B40E263E /* Info.plist */,
-				D68EA434D63F104A1DE586F9C2212B03 /* Pods-ElmLangUITests.modulemap */,
-				EDA27ECBD21DC3D1D6C03566100AEA90 /* Pods-ElmLangUITests-acknowledgements.markdown */,
-				C67638AEEA92AA49E690098BD8B7398C /* Pods-ElmLangUITests-acknowledgements.plist */,
-				8A8881A867C8F83823CF90A0B5AB83FE /* Pods-ElmLangUITests-dummy.m */,
-				F2D8A93E2604FBFE8CF36BD1892AA699 /* Pods-ElmLangUITests-frameworks.sh */,
-				9DD5E7B237F002665948EBE9F58D9BB7 /* Pods-ElmLangUITests-resources.sh */,
-				0915F6512F10D6F7586F93792784F0E4 /* Pods-ElmLangUITests-umbrella.h */,
-				E60C976BEFE2B09534F024913CE3D1EC /* Pods-ElmLangUITests.debug.xcconfig */,
-				4F5EF6EEEB90792486EC8993D0377393 /* Pods-ElmLangUITests.release.xcconfig */,
-			);
-			name = "Pods-ElmLangUITests";
-			path = "Target Support Files/Pods-ElmLangUITests";
-			sourceTree = "<group>";
-		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		4C5F48A2674CC14A6D77F04165F43F9A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				46C8493DD5B4ED8FB56AF16015E03D79 /* Alamofire.modulemap */,
-				D6D458F5B55B33275B7B00F8D466FA45 /* Alamofire.xcconfig */,
-				624838A6B51DCD19C03E9CE510C87F21 /* Alamofire-dummy.m */,
-				47E8D5DC75DE4E7B92937034942E567F /* Alamofire-prefix.pch */,
-				C3D02A325F7FFB04BA27A258C5A12A36 /* Alamofire-umbrella.h */,
-				9874EF2E1AD419D5FB420BB09C6771F8 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Alamofire";
-			sourceTree = "<group>";
-		};
-		53C6E1EED5EF4F3506685DD559248043 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				352EA1961AA9D51279B98584051F93FC /* Alamofire.framework */,
-				65304D92631C858C389991A76B67C786 /* Pods_ElmLang.framework */,
-				4682FDAE2151339A8AD450463B2D2030 /* Pods_ElmLangTests.framework */,
-				85E300D195C1F30CE5C204442A9CF727 /* Pods_ElmLangUITests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		67A59EAE3D245CC453316B6D1F77FF6E /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				12F26F0284B110881CFFA4E0C608ABB0 /* Alamofire.swift */,
-				C01B4FDA709BAB18C78AC35D8482F822 /* Error.swift */,
-				0404A3D2880BBE789D29EC90AB97A631 /* MultipartFormData.swift */,
-				E561C9591507708B1619612C25F4FB3D /* NetworkReachabilityManager.swift */,
-				8AB65DCDBF1E12EED16DF533B7F79F08 /* Notifications.swift */,
-				09294ED953CE756DAD9ED2283D7C71A5 /* ParameterEncoding.swift */,
-				89B519D43AB1A12570DA50BEA3287FBE /* Request.swift */,
-				7E4ADE1F9EDCF5611AD8CFC55FA41D02 /* Response.swift */,
-				57EF0E1E0F02663B670AEDC2616B3FCA /* ResponseSerialization.swift */,
-				676E94F46DCFECE10AC16E2D389665C4 /* Result.swift */,
-				0866F057FF5EF472EDDB0FD5FB14321D /* ServerTrustPolicy.swift */,
-				0A9BE871E0622966E4DD0AE5A05F5D0E /* SessionDelegate.swift */,
-				1778564B25073607098B2071DB1A21A9 /* SessionManager.swift */,
-				AFB7EB1B0579A4903F3C12D7E121A2AD /* TaskDelegate.swift */,
-				DCF96950B65F8F4A61A152EB5908128F /* Timeline.swift */,
-				E5AEFF4DAB154FEFB6B2E950AA0DB231 /* Validation.swift */,
-				4C5F48A2674CC14A6D77F04165F43F9A /* Support Files */,
-			);
-			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		7068ED03C99D7F9C48B807BDA21A5ACA /* Pods-ElmLangTests */ = {
-			isa = PBXGroup;
-			children = (
-				E1FF2C565263FC735E8AE0E024322131 /* Info.plist */,
-				46847333D20A6E291540516BF4CB0188 /* Pods-ElmLangTests.modulemap */,
-				4A67D26E8CCE454AC7450D64E55920DE /* Pods-ElmLangTests-acknowledgements.markdown */,
-				78BB669E2271B8C164B3AA0157BD8FD7 /* Pods-ElmLangTests-acknowledgements.plist */,
-				64AC287C45AFF4434DDEAF754FA14531 /* Pods-ElmLangTests-dummy.m */,
-				4542920D25E667DAA3615085CA8ECFD4 /* Pods-ElmLangTests-frameworks.sh */,
-				787C111C0B054159EAAB6771C6C747AE /* Pods-ElmLangTests-resources.sh */,
-				7E0DE7310699521EE4A0D617B7B3419E /* Pods-ElmLangTests-umbrella.h */,
-				0E99089E1E3062DD2D62F6594830BC5F /* Pods-ElmLangTests.debug.xcconfig */,
-				1EDC6AF1D8DA8291192255462FC92AA2 /* Pods-ElmLangTests.release.xcconfig */,
-			);
-			name = "Pods-ElmLangTests";
-			path = "Target Support Files/Pods-ElmLangTests";
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				C1C47EB63384A0BDC1A00900680D89A7 /* Pods */,
-				53C6E1EED5EF4F3506685DD559248043 /* Products */,
-				D401282DA1529BE179C4E1797E84CF1D /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BF757FCAFBCCA9516DE489F4C4315B50 /* Pods-ElmLang */ = {
-			isa = PBXGroup;
-			children = (
-				D96DD6E721E52C43CD2805114C8F4B5E /* Info.plist */,
-				707A9A145D57B7373F29B58E378C6CDB /* Pods-ElmLang.modulemap */,
-				EAB86F94DB74918B46587378CF1AD601 /* Pods-ElmLang-acknowledgements.markdown */,
-				F9B3DBA0B98B9EFBEC60815657BD1A1C /* Pods-ElmLang-acknowledgements.plist */,
-				14E315E02BF06E8272C09F3729D3A07A /* Pods-ElmLang-dummy.m */,
-				B7C87F851AD4CE86B20115C9E2CECDED /* Pods-ElmLang-frameworks.sh */,
-				6B56A704F1893A64DC9DB0446E4789FA /* Pods-ElmLang-resources.sh */,
-				D597C6EA5955F6F5F7FE281102A698B6 /* Pods-ElmLang-umbrella.h */,
-				C4F49E4E434FFC9454DAFF068BC2DF3F /* Pods-ElmLang.debug.xcconfig */,
-				E59C719BC9153C11CF68501AD3A36A77 /* Pods-ElmLang.release.xcconfig */,
-			);
-			name = "Pods-ElmLang";
-			path = "Target Support Files/Pods-ElmLang";
-			sourceTree = "<group>";
-		};
-		C1C47EB63384A0BDC1A00900680D89A7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				67A59EAE3D245CC453316B6D1F77FF6E /* Alamofire */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D401282DA1529BE179C4E1797E84CF1D /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BF757FCAFBCCA9516DE489F4C4315B50 /* Pods-ElmLang */,
-				7068ED03C99D7F9C48B807BDA21A5ACA /* Pods-ElmLangTests */,
-				03240CB9B0806FAD103E0F82755F35D7 /* Pods-ElmLangUITests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		2F24ACEB43D5505BEDE0C209B616E2D3 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C34F209E7E5BE856F1DF50F470304424 /* Alamofire-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D0E3E10903B5C2E225F579FFB9644E4A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				602B3B0619476BB04CBF2FDD592ACBA2 /* Pods-ElmLang-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D758906158241A38887B7144E6631E92 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B7674E283F8230D4208895AF8C57822E /* Pods-ElmLangUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DB515A3C3340D4B9952E813ECF4760D2 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				915D1CB5DE3E540EE1DCB5171243A30B /* Pods-ElmLangTests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		693728E615E02A5B8E4542DC480EE4C8 /* Pods-ElmLangUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC1859011195A79D4A0F2DFBF65C2EF7 /* Build configuration list for PBXNativeTarget "Pods-ElmLangUITests" */;
-			buildPhases = (
-				E1E84C6A18BB151BB969FCE228288564 /* Sources */,
-				248AD5933905F8D5BAD3A522FE2B725E /* Frameworks */,
-				D758906158241A38887B7144E6631E92 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-ElmLangUITests";
-			productName = "Pods-ElmLangUITests";
-			productReference = 85E300D195C1F30CE5C204442A9CF727 /* Pods_ElmLangUITests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7B6F52488EC10931E5A24414ECAE1BD4 /* Alamofire */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 316CC7A8A1D2471283BE146FAC5A89E0 /* Build configuration list for PBXNativeTarget "Alamofire" */;
-			buildPhases = (
-				2E587F6FE778F5229D2F8E1437955C79 /* Sources */,
-				FED6EDB99D42D9AF373285A7A75AA564 /* Frameworks */,
-				2F24ACEB43D5505BEDE0C209B616E2D3 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Alamofire;
-			productName = Alamofire;
-			productReference = 352EA1961AA9D51279B98584051F93FC /* Alamofire.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A08C5D60C2EAB6E1BD73B8F4960D2A50 /* Pods-ElmLang */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 69EF77210DAF442693C9737A8542C875 /* Build configuration list for PBXNativeTarget "Pods-ElmLang" */;
-			buildPhases = (
-				DED752B13A7DAD74A245F61D47AACC5E /* Sources */,
-				4A4B62F0D8B04237C326E5E56CA7BBBA /* Frameworks */,
-				D0E3E10903B5C2E225F579FFB9644E4A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8B96E80965E1E744D6012F43C8DBD341 /* PBXTargetDependency */,
-			);
-			name = "Pods-ElmLang";
-			productName = "Pods-ElmLang";
-			productReference = 65304D92631C858C389991A76B67C786 /* Pods_ElmLang.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B82F2B27B370AFECFFEDC74B008C03A1 /* Pods-ElmLangTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3680A7CAA5A4272B589AC890EAF595AB /* Build configuration list for PBXNativeTarget "Pods-ElmLangTests" */;
-			buildPhases = (
-				5B1D220E339608F3E2727490A3D5A02E /* Sources */,
-				C11DBDDB0569CE5B28AFA6B37AC709D2 /* Frameworks */,
-				DB515A3C3340D4B9952E813ECF4760D2 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-ElmLangTests";
-			productName = "Pods-ElmLangTests";
-			productReference = 4682FDAE2151339A8AD450463B2D2030 /* Pods_ElmLangTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					7B6F52488EC10931E5A24414ECAE1BD4 = {
-						LastSwiftMigration = 0800;
-					};
-					A08C5D60C2EAB6E1BD73B8F4960D2A50 = {
-						LastSwiftMigration = 0800;
-					};
-				};
-			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 53C6E1EED5EF4F3506685DD559248043 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				7B6F52488EC10931E5A24414ECAE1BD4 /* Alamofire */,
-				A08C5D60C2EAB6E1BD73B8F4960D2A50 /* Pods-ElmLang */,
-				B82F2B27B370AFECFFEDC74B008C03A1 /* Pods-ElmLangTests */,
-				693728E615E02A5B8E4542DC480EE4C8 /* Pods-ElmLangUITests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXSourcesBuildPhase section */
-		2E587F6FE778F5229D2F8E1437955C79 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3FC608FC88CDA077F29912E176F70EA4 /* Alamofire-dummy.m in Sources */,
-				5226DCAD7A66B91FED757730B36792A9 /* Alamofire.swift in Sources */,
-				FAE4D3C78B20FCC3757437B895901EF4 /* Error.swift in Sources */,
-				7F9B0FD02463DA4FFCA278AA344636BB /* MultipartFormData.swift in Sources */,
-				5A3016D5EC8C68BC6FCF0ECC754660A8 /* NetworkReachabilityManager.swift in Sources */,
-				6568C0453237BC5DB5DE272D993AEC6A /* Notifications.swift in Sources */,
-				A3C1B5E525CF0D4453FFB9725BDBC933 /* ParameterEncoding.swift in Sources */,
-				F4211E93D60755D2AA87E19C58D466F5 /* Request.swift in Sources */,
-				CCBDEF648407AB84FE6B382966E05F2A /* Response.swift in Sources */,
-				9F2748FA7E1EC90E940FD13B80A74C3C /* ResponseSerialization.swift in Sources */,
-				13E39355B9B2F07FC6619E46E2488EB9 /* Result.swift in Sources */,
-				989E76EA7F66D2703BE7C4D8C4D491FE /* ServerTrustPolicy.swift in Sources */,
-				890C421F2AE399D7D782F0461B1B1D99 /* SessionDelegate.swift in Sources */,
-				4C4D859A3DF35B6D7DE08509AA808675 /* SessionManager.swift in Sources */,
-				1494389C8E30F964D52FC95176FBAC1D /* TaskDelegate.swift in Sources */,
-				38FD65F98DC17A7B6FB3D7BAD8D1BA6A /* Timeline.swift in Sources */,
-				CC7F234B388263547F80F7C55ECB76EE /* Validation.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5B1D220E339608F3E2727490A3D5A02E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D67864E5460881F10A06588277432BBA /* Pods-ElmLangTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DED752B13A7DAD74A245F61D47AACC5E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A4334A1C7B6504797DA6453FE814CB0 /* Pods-ElmLang-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E1E84C6A18BB151BB969FCE228288564 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				979EA8B947835363DB0BB31DEA46ED18 /* Pods-ElmLangUITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8B96E80965E1E744D6012F43C8DBD341 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = 7B6F52488EC10931E5A24414ECAE1BD4 /* Alamofire */;
-			targetProxy = 1CE3F2C5D570E99040F3C5A749C4CCFA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		42287DDF97330524BA3EF220F0276DA6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		42E6D586976F0A1C20AC71D2A08117F9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6D458F5B55B33275B7B00F8D466FA45 /* Alamofire.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6899704C3737B8CD94A8A27374C84ABB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6D458F5B55B33275B7B00F8D466FA45 /* Alamofire.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		81A1BCBCE60CA9B3745F7C9C14672F55 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EDC6AF1D8DA8291192255462FC92AA2 /* Pods-ElmLangTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ElmLangTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ElmLangTests/Pods-ElmLangTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ElmLangTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8268544C9E5F9565DD41408E82663BEE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4F49E4E434FFC9454DAFF068BC2DF3F /* Pods-ElmLang.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ElmLang/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ElmLang/Pods-ElmLang.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ElmLang;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		AE9439C22469D35336242DD983DB5C5F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				ONLY_ACTIVE_ARCH = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		B34802B366A59AE2EEB5E6BBB6FC40C5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E99089E1E3062DD2D62F6594830BC5F /* Pods-ElmLangTests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ElmLangTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ElmLangTests/Pods-ElmLangTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ElmLangTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C4F028FC421EF9932E1D80FF29ABC3BE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E59C719BC9153C11CF68501AD3A36A77 /* Pods-ElmLang.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ElmLang/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ElmLang/Pods-ElmLang.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ElmLang;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		EAE7D07896AACA33D6C2D6D432680C28 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F5EF6EEEB90792486EC8993D0377393 /* Pods-ElmLangUITests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ElmLangUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ElmLangUITests/Pods-ElmLangUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ElmLangUITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FF74EF3A9C54049BB9CDF9DEEBF45F47 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E60C976BEFE2B09534F024913CE3D1EC /* Pods-ElmLangUITests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ElmLangUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ElmLangUITests/Pods-ElmLangUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ElmLangUITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AE9439C22469D35336242DD983DB5C5F /* Debug */,
-				42287DDF97330524BA3EF220F0276DA6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		316CC7A8A1D2471283BE146FAC5A89E0 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6899704C3737B8CD94A8A27374C84ABB /* Debug */,
-				42E6D586976F0A1C20AC71D2A08117F9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3680A7CAA5A4272B589AC890EAF595AB /* Build configuration list for PBXNativeTarget "Pods-ElmLangTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B34802B366A59AE2EEB5E6BBB6FC40C5 /* Debug */,
-				81A1BCBCE60CA9B3745F7C9C14672F55 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		69EF77210DAF442693C9737A8542C875 /* Build configuration list for PBXNativeTarget "Pods-ElmLang" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8268544C9E5F9565DD41408E82663BEE /* Debug */,
-				C4F028FC421EF9932E1D80FF29ABC3BE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FC1859011195A79D4A0F2DFBF65C2EF7 /* Build configuration list for PBXNativeTarget "Pods-ElmLangUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FF74EF3A9C54049BB9CDF9DEEBF45F47 /* Debug */,
-				EAE7D07896AACA33D6C2D6D432680C28 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>03240CB9B0806FAD103E0F82755F35D7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>48F077EB6659957E0FDBB960B40E263E</string>
+				<string>D68EA434D63F104A1DE586F9C2212B03</string>
+				<string>EDA27ECBD21DC3D1D6C03566100AEA90</string>
+				<string>C67638AEEA92AA49E690098BD8B7398C</string>
+				<string>8A8881A867C8F83823CF90A0B5AB83FE</string>
+				<string>F2D8A93E2604FBFE8CF36BD1892AA699</string>
+				<string>9DD5E7B237F002665948EBE9F58D9BB7</string>
+				<string>0915F6512F10D6F7586F93792784F0E4</string>
+				<string>E60C976BEFE2B09534F024913CE3D1EC</string>
+				<string>4F5EF6EEEB90792486EC8993D0377393</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-ElmLangUITests</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-ElmLangUITests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>034014829C1E4434983CF3A690C12017</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>POD_CONFIGURATION_DEBUG=1</string>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0915F6512F10D6F7586F93792784F0E4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-ElmLangUITests-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0E99089E1E3062DD2D62F6594830BC5F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-ElmLangTests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>14E315E02BF06E8272C09F3729D3A07A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-ElmLang-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1EDC6AF1D8DA8291192255462FC92AA2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-ElmLangTests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>248AD5933905F8D5BAD3A522FE2B725E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>8A6F7B6001BE32A63AB83D6E1E768023</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2AF966782FEC5CDF8F01FB04C1B3D97D</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_ElmLangUITests.framework</string>
+			<key>path</key>
+			<string>Pods-ElmLangUITests.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>034014829C1E4434983CF3A690C12017</string>
+				<string>C7E474A03CAE21F1CB6046E7344C59BD</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>342D6833489D51D8C8790D15AD4E52F6</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B5F6CF738E52A1D9FD79B9E561455476</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>34917B259221E27C5F40996AA725EFA7</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>DC9B4DCCBC0988AD349928514FC4A94C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>BAAEF35C076CC5430A201BAC3B0E491D</string>
+				<string>342D6833489D51D8C8790D15AD4E52F6</string>
+				<string>EEA3E02C801A997256BFB1F4393DDF12</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-ElmLang</string>
+			<key>productName</key>
+			<string>Pods-ElmLang</string>
+			<key>productReference</key>
+			<string>93AED306F195D049484DD6C35B1D197B</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>3680A7CAA5A4272B589AC890EAF595AB</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>C7C92804F105F0C2C64C75D0D4C61709</string>
+				<string>512F498BC76E78F8D5C33A178B8D5840</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>3DCAB2B7CDE207B3958B6CB957FCC758</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3F6100F629ED91BE718B45F17274585A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>E59C719BC9153C11CF68501AD3A36A77</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-ElmLang/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-ElmLang/Pods-ElmLang.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_ElmLang</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>4542920D25E667DAA3615085CA8ECFD4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-ElmLangTests-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>46728820CED688E13C9FBBEFF4D4B296</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>46847333D20A6E291540516BF4CB0188</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-ElmLangTests.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>48F077EB6659957E0FDBB960B40E263E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4A67D26E8CCE454AC7450D64E55920DE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-ElmLangTests-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4F5EF6EEEB90792486EC8993D0377393</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-ElmLangUITests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>512F498BC76E78F8D5C33A178B8D5840</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>1EDC6AF1D8DA8291192255462FC92AA2</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-ElmLangTests/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-ElmLangTests/Pods-ElmLangTests.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_ElmLangTests</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>5B1D220E339608F3E2727490A3D5A02E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D67864E5460881F10A06588277432BBA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>64AC287C45AFF4434DDEAF754FA14531</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-ElmLangTests-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>693728E615E02A5B8E4542DC480EE4C8</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>FC1859011195A79D4A0F2DFBF65C2EF7</string>
+			<key>buildPhases</key>
+			<array>
+				<string>E1E84C6A18BB151BB969FCE228288564</string>
+				<string>248AD5933905F8D5BAD3A522FE2B725E</string>
+				<string>D758906158241A38887B7144E6631E92</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-ElmLangUITests</string>
+			<key>productName</key>
+			<string>Pods-ElmLangUITests</string>
+			<key>productReference</key>
+			<string>2AF966782FEC5CDF8F01FB04C1B3D97D</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>6B56A704F1893A64DC9DB0446E4789FA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-ElmLang-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7068ED03C99D7F9C48B807BDA21A5ACA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E1FF2C565263FC735E8AE0E024322131</string>
+				<string>46847333D20A6E291540516BF4CB0188</string>
+				<string>4A67D26E8CCE454AC7450D64E55920DE</string>
+				<string>78BB669E2271B8C164B3AA0157BD8FD7</string>
+				<string>64AC287C45AFF4434DDEAF754FA14531</string>
+				<string>4542920D25E667DAA3615085CA8ECFD4</string>
+				<string>787C111C0B054159EAAB6771C6C747AE</string>
+				<string>7E0DE7310699521EE4A0D617B7B3419E</string>
+				<string>0E99089E1E3062DD2D62F6594830BC5F</string>
+				<string>1EDC6AF1D8DA8291192255462FC92AA2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-ElmLangTests</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-ElmLangTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>707A9A145D57B7373F29B58E378C6CDB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-ElmLang.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>787C111C0B054159EAAB6771C6C747AE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-ElmLangTests-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>78BB669E2271B8C164B3AA0157BD8FD7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-ElmLangTests-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7DB346D0F39D3F0E887471402A8071AB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>93A4A3777CF96A4AAC1D13BA6DCCEA73</string>
+				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
+				<string>9CC10D4DFC2EAC3A9CC1D61F5DD93BEE</string>
+				<string>D401282DA1529BE179C4E1797E84CF1D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7E0DE7310699521EE4A0D617B7B3419E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-ElmLangTests-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8093E8BE690494B9618E2782B9A420E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D597C6EA5955F6F5F7FE281102A698B6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>8A6F7B6001BE32A63AB83D6E1E768023</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8A8881A867C8F83823CF90A0B5AB83FE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-ElmLangUITests-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>915D1CB5DE3E540EE1DCB5171243A30B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7E0DE7310699521EE4A0D617B7B3419E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>93A4A3777CF96A4AAC1D13BA6DCCEA73</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>text.script.ruby</string>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>93AED306F195D049484DD6C35B1D197B</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_ElmLang.framework</string>
+			<key>path</key>
+			<string>Pods-ElmLang.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>94AF0705C63EB9EE8F4047571947F4BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>14E315E02BF06E8272C09F3729D3A07A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>979EA8B947835363DB0BB31DEA46ED18</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8A8881A867C8F83823CF90A0B5AB83FE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9CC10D4DFC2EAC3A9CC1D61F5DD93BEE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>93AED306F195D049484DD6C35B1D197B</string>
+				<string>BDF85C19497C9CFA345F1DE052E324CE</string>
+				<string>2AF966782FEC5CDF8F01FB04C1B3D97D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9DD5E7B237F002665948EBE9F58D9BB7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-ElmLangUITests-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B5F6CF738E52A1D9FD79B9E561455476</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B7674E283F8230D4208895AF8C57822E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0915F6512F10D6F7586F93792784F0E4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>B7C87F851AD4CE86B20115C9E2CECDED</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-ElmLang-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B82F2B27B370AFECFFEDC74B008C03A1</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>3680A7CAA5A4272B589AC890EAF595AB</string>
+			<key>buildPhases</key>
+			<array>
+				<string>5B1D220E339608F3E2727490A3D5A02E</string>
+				<string>C11DBDDB0569CE5B28AFA6B37AC709D2</string>
+				<string>DB515A3C3340D4B9952E813ECF4760D2</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-ElmLangTests</string>
+			<key>productName</key>
+			<string>Pods-ElmLangTests</string>
+			<key>productReference</key>
+			<string>BDF85C19497C9CFA345F1DE052E324CE</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>BAAEF35C076CC5430A201BAC3B0E491D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>94AF0705C63EB9EE8F4047571947F4BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>BC3CA7F9E30CC8F7E2DD044DD34432FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3DCAB2B7CDE207B3958B6CB957FCC758</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BDF85C19497C9CFA345F1DE052E324CE</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_ElmLangTests.framework</string>
+			<key>path</key>
+			<string>Pods-ElmLangTests.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>BF757FCAFBCCA9516DE489F4C4315B50</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D96DD6E721E52C43CD2805114C8F4B5E</string>
+				<string>707A9A145D57B7373F29B58E378C6CDB</string>
+				<string>EAB86F94DB74918B46587378CF1AD601</string>
+				<string>F9B3DBA0B98B9EFBEC60815657BD1A1C</string>
+				<string>14E315E02BF06E8272C09F3729D3A07A</string>
+				<string>B7C87F851AD4CE86B20115C9E2CECDED</string>
+				<string>6B56A704F1893A64DC9DB0446E4789FA</string>
+				<string>D597C6EA5955F6F5F7FE281102A698B6</string>
+				<string>C4F49E4E434FFC9454DAFF068BC2DF3F</string>
+				<string>E59C719BC9153C11CF68501AD3A36A77</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-ElmLang</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-ElmLang</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C11DBDDB0569CE5B28AFA6B37AC709D2</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>46728820CED688E13C9FBBEFF4D4B296</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C4F49E4E434FFC9454DAFF068BC2DF3F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-ElmLang.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C67638AEEA92AA49E690098BD8B7398C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-ElmLangUITests-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7C92804F105F0C2C64C75D0D4C61709</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>0E99089E1E3062DD2D62F6594830BC5F</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-ElmLangTests/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-ElmLangTests/Pods-ElmLangTests.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_ElmLangTests</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>C7E474A03CAE21F1CB6046E7344C59BD</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>POD_CONFIGURATION_RELEASE=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>CB98B2B5C8E1597F5CF7A4E989F7D0A5</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>4F5EF6EEEB90792486EC8993D0377393</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-ElmLangUITests/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-ElmLangUITests/Pods-ElmLangUITests.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_ElmLangUITests</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>CEC22C73C1608DFA5D5D78BDCB218219</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>D401282DA1529BE179C4E1797E84CF1D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BF757FCAFBCCA9516DE489F4C4315B50</string>
+				<string>7068ED03C99D7F9C48B807BDA21A5ACA</string>
+				<string>03240CB9B0806FAD103E0F82755F35D7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D41D8CD98F00B204E9800998ECF8427E</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0700</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>7DB346D0F39D3F0E887471402A8071AB</string>
+			<key>productRefGroup</key>
+			<string>9CC10D4DFC2EAC3A9CC1D61F5DD93BEE</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>34917B259221E27C5F40996AA725EFA7</string>
+				<string>B82F2B27B370AFECFFEDC74B008C03A1</string>
+				<string>693728E615E02A5B8E4542DC480EE4C8</string>
+			</array>
+		</dict>
+		<key>D597C6EA5955F6F5F7FE281102A698B6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-ElmLang-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D67864E5460881F10A06588277432BBA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>64AC287C45AFF4434DDEAF754FA14531</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D68EA434D63F104A1DE586F9C2212B03</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-ElmLangUITests.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D758906158241A38887B7144E6631E92</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B7674E283F8230D4208895AF8C57822E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D96DD6E721E52C43CD2805114C8F4B5E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DB515A3C3340D4B9952E813ECF4760D2</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>915D1CB5DE3E540EE1DCB5171243A30B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DC9B4DCCBC0988AD349928514FC4A94C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>DCCA0D0A05BC4355E95F6DDBA7FC8493</string>
+				<string>3F6100F629ED91BE718B45F17274585A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>DCCA0D0A05BC4355E95F6DDBA7FC8493</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>C4F49E4E434FFC9454DAFF068BC2DF3F</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-ElmLang/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-ElmLang/Pods-ElmLang.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_ElmLang</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>E1E84C6A18BB151BB969FCE228288564</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>979EA8B947835363DB0BB31DEA46ED18</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E1FF2C565263FC735E8AE0E024322131</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E59C719BC9153C11CF68501AD3A36A77</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-ElmLang.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E60C976BEFE2B09534F024913CE3D1EC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-ElmLangUITests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAB86F94DB74918B46587378CF1AD601</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-ElmLang-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EDA27ECBD21DC3D1D6C03566100AEA90</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-ElmLangUITests-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EEA3E02C801A997256BFB1F4393DDF12</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>8093E8BE690494B9618E2782B9A420E1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F2D8A93E2604FBFE8CF36BD1892AA699</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-ElmLangUITests-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F9B3DBA0B98B9EFBEC60815657BD1A1C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-ElmLang-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FC1859011195A79D4A0F2DFBF65C2EF7</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>FFE66026D4D8430BAB409B9D91FBBECB</string>
+				<string>CB98B2B5C8E1597F5CF7A4E989F7D0A5</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>FFE66026D4D8430BAB409B9D91FBBECB</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>E60C976BEFE2B09534F024913CE3D1EC</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-ElmLangUITests/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-ElmLangUITests/Pods-ElmLangUITests.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_ElmLangUITests</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>D41D8CD98F00B204E9800998ECF8427E</string>
+</dict>
+</plist>

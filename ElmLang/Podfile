@@ -6,9 +6,9 @@ target 'ElmLang' do
   use_frameworks!
 
   # Pods for ElmLang
-  pod 'Alamofire',
-    :git => 'https://github.com/Alamofire/Alamofire.git',
-    :branch => 'swift3'
+  # pod 'Alamofire',
+  #   :git => 'https://github.com/Alamofire/Alamofire.git',
+  #   :branch => 'swift3'
 
   target 'ElmLangTests' do
     inherit! :search_paths

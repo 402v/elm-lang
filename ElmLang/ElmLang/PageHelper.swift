@@ -69,7 +69,11 @@ extension URL {
 }
 
 extension UIWebView {
-    func title() -> String? {
+    func documentTitle() -> String? {
         return self.stringByEvaluatingJavaScript(from: "document.title")
+    }
+
+    func documentURL() -> String? {
+        return self.stringByEvaluatingJavaScript(from: "document.URL")
     }
 }

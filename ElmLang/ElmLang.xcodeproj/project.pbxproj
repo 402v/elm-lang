@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		50BC5950CEE7C81C2E383EA0 /* Pods_ElmLangTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577992C1281D5DEE26F8C766 /* Pods_ElmLangTests.framework */; };
 		830B0CAC296871551227543E /* Pods_ElmLangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA6AEFA1BAA28B624D3681D4 /* Pods_ElmLangUITests.framework */; };
+		CB3F44A01D61F94900CEB231 /* JavascriptHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F449F1D61F94900CEB231 /* JavascriptHelper.swift */; };
+		CB3F44A51D6218F700CEB231 /* FAIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F44A31D6218F700CEB231 /* FAIcon.swift */; };
+		CB3F44A61D6218F700CEB231 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB3F44A41D6218F700CEB231 /* FontAwesome.ttf */; };
 		CB921B2E1D5F9124008C025E /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B2D1D5F9124008C025E /* NetworkHelper.swift */; };
 		CB921B301D5F98DC008C025E /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B2F1D5F98DC008C025E /* Page.swift */; };
 		CB921B341D601698008C025E /* ElmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B331D601698008C025E /* ElmViewController.swift */; };
@@ -56,6 +59,9 @@
 		577992C1281D5DEE26F8C766 /* Pods_ElmLangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElmLangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85194B4114026EE224C17031 /* Pods-ElmLangTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElmLangTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ElmLangTests/Pods-ElmLangTests.release.xcconfig"; sourceTree = "<group>"; };
 		BA6AEFA1BAA28B624D3681D4 /* Pods_ElmLangUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElmLangUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB3F449F1D61F94900CEB231 /* JavascriptHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavascriptHelper.swift; sourceTree = "<group>"; };
+		CB3F44A31D6218F700CEB231 /* FAIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAIcon.swift; sourceTree = "<group>"; };
+		CB3F44A41D6218F700CEB231 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
 		CB921B2D1D5F9124008C025E /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		CB921B2F1D5F98DC008C025E /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		CB921B331D601698008C025E /* ElmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElmViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +133,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CB3F44A11D6218F700CEB231 /* CustomPods */ = {
+			isa = PBXGroup;
+			children = (
+				CB3F44A21D6218F700CEB231 /* Font-Awesome-Swift */,
+			);
+			path = CustomPods;
+			sourceTree = "<group>";
+		};
+		CB3F44A21D6218F700CEB231 /* Font-Awesome-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				CB3F44A31D6218F700CEB231 /* FAIcon.swift */,
+				CB3F44A41D6218F700CEB231 /* FontAwesome.ttf */,
+			);
+			path = "Font-Awesome-Swift";
+			sourceTree = "<group>";
+		};
 		CB921B311D5F98E2008C025E /* models */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +204,7 @@
 		CBD52F7F1D5F804100ED3BB6 /* ElmLang */ = {
 			isa = PBXGroup;
 			children = (
+				CB3F44A11D6218F700CEB231 /* CustomPods */,
 				CB921B451D60E59A008C025E /* Bridge */,
 				CB921B321D601678008C025E /* view */,
 				CB921B311D5F98E2008C025E /* models */,
@@ -221,6 +245,7 @@
 				CB921B3D1D60C622008C025E /* PocketHelper.swift */,
 				CB921B3F1D60C62A008C025E /* ShareHelper.swift */,
 				CB921B431D60D58B008C025E /* FileHelper.swift */,
+				CB3F449F1D61F94900CEB231 /* JavascriptHelper.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -359,6 +384,7 @@
 				CBD52F8B1D5F804100ED3BB6 /* LaunchScreen.storyboard in Resources */,
 				CBD52F881D5F804100ED3BB6 /* Assets.xcassets in Resources */,
 				CBD52F861D5F804100ED3BB6 /* Main.storyboard in Resources */,
+				CB3F44A61D6218F700CEB231 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,7 +537,9 @@
 				CB921B2E1D5F9124008C025E /* NetworkHelper.swift in Sources */,
 				CB921B381D6039C8008C025E /* PocketViewController.swift in Sources */,
 				CB921B441D60D58B008C025E /* FileHelper.swift in Sources */,
+				CB3F44A01D61F94900CEB231 /* JavascriptHelper.swift in Sources */,
 				CB921B421D60D2DC008C025E /* Penny.swift in Sources */,
+				CB3F44A51D6218F700CEB231 /* FAIcon.swift in Sources */,
 				CB921B361D601D9A008C025E /* PageHelper.swift in Sources */,
 				CB921B481D60E5CD008C025E /* Objective-C.m in Sources */,
 				CB921B301D5F98DC008C025E /* Page.swift in Sources */,
@@ -592,6 +620,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -642,6 +671,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

@@ -10,6 +10,11 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var getStartedButton : UIButton?
+    @IBOutlet weak var pocketButton : UIButton?
+    @IBOutlet weak var playgroundsButton : UIButton?
+    @IBOutlet weak var examplesButton : UIButton?
+
     var pageList : [String: Page]?
     let pageHelper = PageHelper()
 
@@ -58,12 +63,18 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+        buttonsEnabled(enabled: false)
+        
         NetworkHelper().fetchURLLocations() {
             (data, error)->Void in
             if error != nil {
                 print(error)
             } else {
                 self.pageList = self.pageHelper.parsePageList(data: data)
+
+                DispatchQueue.main.async {
+                    self.buttonsEnabled(enabled: true)
+                }
             }
         }
     }
@@ -73,6 +84,11 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func buttonsEnabled(enabled: Bool) -> Void {
+        self.getStartedButton?.isEnabled = enabled
+        self.pocketButton?.isEnabled = enabled
+        self.playgroundsButton?.isEnabled = enabled
+        self.examplesButton?.isEnabled = enabled
+    }
 }
 

@@ -61,6 +61,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Elm" id="Hdx-nK-FO4"/>
+                    <connections>
+                        <outlet property="examplesButton" destination="omp-xr-qzd" id="cbB-n6-wdm"/>
+                        <outlet property="getStartedButton" destination="l8T-TS-9F0" id="Mqq-44-iz1"/>
+                        <outlet property="playgroundsButton" destination="q4K-Ca-EMh" id="jdc-jF-agT"/>
+                        <outlet property="pocketButton" destination="ccg-Sq-IYA" id="qMg-kK-9EH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -259,7 +265,7 @@
         <scene sceneID="yBU-h0-Yww">
             <objects>
                 <navigationController id="uWd-pa-gVl" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bab-f8-cQk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bab-f8-cQk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -292,17 +298,17 @@
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5JK-K3-cAE">
                                 <items>
-                                    <barButtonItem style="plain" id="gez-hj-DEq">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hku-9S-lwg">
+                                    <barButtonItem style="plain" id="Dp1-Ob-vHl">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VEz-As-Clg">
                                             <rect key="frame" x="16" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="F"/>
+                                            <state key="normal" title="I"/>
                                             <connections>
-                                                <action selector="goForward" destination="WBZ-86-flu" eventType="touchUpInside" id="DvN-2E-E7A"/>
+                                                <action selector="index" destination="WBZ-86-flu" eventType="touchUpInside" id="6jK-OR-IY5"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Z9M-SW-VpX"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="xxq-Lb-bZ5"/>
                                     <barButtonItem style="plain" id="lel-TU-sKZ">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ldv-XF-Fdc">
                                             <rect key="frame" x="98" y="7" width="30" height="30"/>
@@ -313,10 +319,21 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Z9M-SW-VpX"/>
+                                    <barButtonItem style="plain" id="gez-hj-DEq">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hku-9S-lwg">
+                                            <rect key="frame" x="180" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="F"/>
+                                            <connections>
+                                                <action selector="goForward" destination="WBZ-86-flu" eventType="touchUpInside" id="DvN-2E-E7A"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="S5B-Ed-2XP"/>
                                     <barButtonItem style="plain" id="4HO-y0-PrZ">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n60-Bx-YUf">
-                                            <rect key="frame" x="180" y="7" width="34" height="30"/>
+                                            <rect key="frame" x="262" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Save"/>
                                             <connections>
@@ -324,21 +341,10 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="xxq-Lb-bZ5"/>
-                                    <barButtonItem style="plain" id="KhF-Qv-fHU">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zeh-Ns-I3m">
-                                            <rect key="frame" x="266" y="7" width="40" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Share"/>
-                                            <connections>
-                                                <action selector="shareWithSender:" destination="WBZ-86-flu" eventType="touchUpInside" id="ndY-Td-iYP"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ImF-xR-Wmd"/>
                                     <barButtonItem style="plain" id="Z5G-ur-s6l">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8jt-xs-E75">
-                                            <rect key="frame" x="358" y="7" width="51" height="30"/>
+                                            <rect key="frame" x="344" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Bottom"/>
                                             <connections>
@@ -361,18 +367,24 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IHF-Pr-NWv">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Dp1-Ob-vHl">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VEz-As-Clg">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="KhF-Qv-fHU">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zeh-Ns-I3m">
+                                <rect key="frame" x="266" y="7" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Index"/>
+                                <state key="normal" title="Share"/>
                                 <connections>
-                                    <action selector="index" destination="WBZ-86-flu" eventType="touchUpInside" id="u7M-HI-T82"/>
+                                    <action selector="shareWithSender:" destination="WBZ-86-flu" eventType="touchUpInside" id="ndY-Td-iYP"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="indexBtn" destination="VEz-As-Clg" id="6o5-jt-whu"/>
+                        <outlet property="nextBtn" destination="Hku-9S-lwg" id="1Up-fM-qmE"/>
+                        <outlet property="pocketBtn" destination="n60-Bx-YUf" id="qyK-Il-B4r"/>
+                        <outlet property="prevBtn" destination="ldv-XF-Fdc" id="g0S-is-kP9"/>
+                        <outlet property="scrollToBottomBtn" destination="8jt-xs-E75" id="cUq-T1-fU1"/>
+                        <outlet property="shareBtn" destination="Zeh-Ns-I3m" id="Cpf-Az-9ZT"/>
                         <outlet property="webView" destination="WrY-J8-saS" id="veI-Iu-c6p"/>
                     </connections>
                 </viewController>
@@ -383,6 +395,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jM4-IE-PXT"/>
-        <segue reference="VdA-8x-cOT"/>
+        <segue reference="i98-js-hsQ"/>
     </inferredMetricsTieBreakers>
 </document>

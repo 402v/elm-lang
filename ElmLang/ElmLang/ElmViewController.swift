@@ -139,6 +139,16 @@ class ElmViewController: UIViewController, UIWebViewDelegate {
 
         // Do any a dditional setup after loading the view.
         self.updateButtons(force: true, enabled: false)
+
+        let toolbarIconSize: CGFloat = 25
+
+        self.indexBtn?.setFAIcon(icon: FAType.FAListUl, iconSize:toolbarIconSize, forState: .normal)
+        self.prevBtn?.setFAIcon(icon: FAType.FACaretLeft, iconSize:toolbarIconSize, forState: .normal)
+        self.nextBtn?.setFAIcon(icon: FAType.FACaretRight, iconSize:toolbarIconSize, forState: .normal)
+        self.pocketBtn?.setFAIcon(icon: FAType.FAGetPocket, iconSize:toolbarIconSize, forState: .normal)
+        self.scrollToBottomBtn?.setFAIcon(icon: FAType.FAHandODown, iconSize:toolbarIconSize, forState: .normal)
+
+        self.shareBtn?.setFAIcon(icon: FAType.FAShare, iconSize:25, forState: .normal)
     }
 
     override func viewWillAppear(_ animated: Bool) {

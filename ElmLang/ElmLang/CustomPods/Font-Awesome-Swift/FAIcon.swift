@@ -290,15 +290,39 @@ private struct FAStruct {
 
 
 private class FontLoader {
-    
-//    struct Static {
-//        static var onceToken : dispatch_once_t = 0
-//    }
+
+//    lazy var singleton: String = {
+//        let bundle = Bundle(for: FontLoader.self)
+//        var fontURL = NSURL()
+//        let identifier = bundle.bundleIdentifier
+//
+//        if identifier?.hasPrefix("org.cocoapods") == true {
+//
+//            fontURL = bundle.url(forResource: FAStruct.FontName, withExtension: "ttf", subdirectory: "Font-Awesome-Swift.bundle")!
+//        } else {
+//
+//            fontURL = bundle.url(forResource: FAStruct.FontName, withExtension: "ttf")!
+//        }
+//        let data = try! Data(contentsOf: fontURL as URL)
+//
+//        let provider = CGDataProvider(data: data)
+//        let font = CGFont(provider!)
+//
+//        var error: Unmanaged<CFError>?
+//        if !CTFontManagerRegisterGraphicsFont(font, &error) {
+//
+//            let errorDescription: CFString = CFErrorCopyDescription(error!.takeUnretainedValue())
+//            let nsError = error!.takeUnretainedValue() as AnyObject as! NSError
+//            NSException(name: NSExceptionName.internalInconsistencyException, reason: errorDescription as String, userInfo: [NSUnderlyingErrorKey: nsError]).raise()
+//        }
+//    }()
 
     static func loadFontIfNeeded() {
         if (UIFont.fontNames(forFamilyName: FAStruct.FontName).count == 0) {
 
+            // lazily initialized globals
             let doOnce = {
+
                 let bundle = Bundle(for: FontLoader.self)
                 var fontURL = NSURL()
                 let identifier = bundle.bundleIdentifier
@@ -322,7 +346,7 @@ private class FontLoader {
                     let nsError = error!.takeUnretainedValue() as AnyObject as! NSError
                     NSException(name: NSExceptionName.internalInconsistencyException, reason: errorDescription as String, userInfo: [NSUnderlyingErrorKey: nsError]).raise()
                 }
-            }
+            }()
 
             _ = doOnce
         }

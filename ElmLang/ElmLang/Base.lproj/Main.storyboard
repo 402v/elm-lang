@@ -302,7 +302,7 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VEz-As-Clg">
                                             <rect key="frame" x="16" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="I"/>
+                                            <state key="normal" title="In"/>
                                             <connections>
                                                 <action selector="index" destination="WBZ-86-flu" eventType="touchUpInside" id="6jK-OR-IY5"/>
                                             </connections>
@@ -313,7 +313,7 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ldv-XF-Fdc">
                                             <rect key="frame" x="98" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="B"/>
+                                            <state key="normal" title="Pr"/>
                                             <connections>
                                                 <action selector="goBack" destination="WBZ-86-flu" eventType="touchUpInside" id="M2g-b5-fzY"/>
                                             </connections>
@@ -324,7 +324,7 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Hku-9S-lwg">
                                             <rect key="frame" x="180" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="F"/>
+                                            <state key="normal" title="Ne"/>
                                             <connections>
                                                 <action selector="goForward" destination="WBZ-86-flu" eventType="touchUpInside" id="DvN-2E-E7A"/>
                                             </connections>
@@ -335,7 +335,7 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n60-Bx-YUf">
                                             <rect key="frame" x="262" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Save"/>
+                                            <state key="normal" title="Po"/>
                                             <connections>
                                                 <action selector="pocket" destination="WBZ-86-flu" eventType="touchUpInside" id="dfQ-3H-69M"/>
                                             </connections>
@@ -346,7 +346,7 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8jt-xs-E75">
                                             <rect key="frame" x="344" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Bottom"/>
+                                            <state key="normal" title="Bo"/>
                                             <connections>
                                                 <action selector="scrollToBottom" destination="WBZ-86-flu" eventType="touchUpInside" id="uIS-1T-rrR"/>
                                             </connections>
@@ -369,9 +369,9 @@
                     <navigationItem key="navigationItem" id="IHF-Pr-NWv">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="KhF-Qv-fHU">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zeh-Ns-I3m">
-                                <rect key="frame" x="266" y="7" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Share"/>
+                                <rect key="frame" x="319" y="2" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sh"/>
                                 <connections>
                                     <action selector="shareWithSender:" destination="WBZ-86-flu" eventType="touchUpInside" id="ndY-Td-iYP"/>
                                 </connections>

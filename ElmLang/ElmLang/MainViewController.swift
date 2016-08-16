@@ -15,8 +15,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var playgroundsButton : UIButton?
     @IBOutlet weak var examplesButton : UIButton?
 
-    var pageList : [String: Page]?
+    var pageList: [String: Page]?
     let pageHelper = PageHelper()
+
+    var hasAppear: Bool = false
 
     @IBAction func buttonClicked(sender: UIButton) {
 //        let appdelegate = UIApplication.shared.delegate as! AppDelegate
@@ -51,7 +53,7 @@ class MainViewController: UIViewController {
 
     // MARK: - Rotate
     override var shouldAutorotate: Bool {
-        return false
+        return true
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -79,6 +81,21 @@ class MainViewController: UIViewController {
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if hasAppear {
+            UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue,
+                                      forKey: "orientation")
+        }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        self.hasAppear = true
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -90,5 +107,22 @@ class MainViewController: UIViewController {
         self.playgroundsButton?.isEnabled = enabled
         self.examplesButton?.isEnabled = enabled
     }
+}
+
+extension UINavigationController {
+    public override var shouldAutorotate: Bool {
+        guard let viewCtrl = self.visibleViewController else { return true }
+        return viewCtrl.shouldAutorotate
+    }
+
+    public override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        guard let viewCtrl = self.visibleViewController else { return .all }
+        return viewCtrl.supportedInterfaceOrientations
+    }
+
+//    public override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+//        guard let viewCtrl = self.visibleViewController else { return .portrait }
+//        return viewCtrl.preferredInterfaceOrientationForPresentation
+//    }
 }
 

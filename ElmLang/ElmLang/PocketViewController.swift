@@ -17,10 +17,32 @@ class PocketViewController: UIViewController, UICollectionViewDataSource, UIColl
     var pennyList: [Penny] = PocketHelper().pockets()
     var selectPenny: Penny?
 
+    var hasAppear: Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let flowLayout = self.pennyView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            if let width = UIApplication.shared.keyWindow?.frame.width {
+                flowLayout.itemSize = CGSize(width: width, height: 60)
+                flowLayout.invalidateLayout()
+            }
+        }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if hasAppear {
+            self.pennyList = PocketHelper().pockets()
+            self.pennyView?.reloadData()
+        }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.hasAppear = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,11 +87,12 @@ class PocketViewController: UIViewController, UICollectionViewDataSource, UIColl
         let penny = self.pennyList[indexPath.item]
 
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        cell.urlLabel.text = penny.title
-        cell.backgroundColor = UIColor.yellow // make cell more visible in our example project
-        cell.layer.borderColor = UIColor.gray.cgColor
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 8
+        cell.titleLable?.text = penny.title
+        cell.urlLabel?.text = penny.url?.absoluteString
+//        cell.backgroundColor = UIColor.yellow // make cell more visible in our example project
+//        cell.layer.borderColor = UIColor.gray.cgColor
+//        cell.layer.borderWidth = 1
+//        cell.layer.cornerRadius = 8
 
         return cell
     }
@@ -88,13 +111,13 @@ class PocketViewController: UIViewController, UICollectionViewDataSource, UIColl
     // change background color when user touches cell
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor = UIColor.red
+        cell?.backgroundColor = UIColor.init(colorLiteralRed: 0.937, green: 0.941, blue: 0.945, alpha: 1.00) // eff0f1
     }
 
     // change background color back when user releases touch
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor = UIColor.yellow
+        cell?.backgroundColor = UIColor.clear
     }
 
     /*
@@ -111,5 +134,6 @@ class PocketViewController: UIViewController, UICollectionViewDataSource, UIColl
 
 class PennyCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var urlLabel: UILabel!
+    @IBOutlet weak var titleLable: UILabel?
+    @IBOutlet weak var urlLabel: UILabel?
 }

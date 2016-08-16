@@ -21,6 +21,9 @@ class ElmViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var shareBtn: UIButton?
     @IBOutlet weak var scrollToBottomBtn: UIButton?
 
+    let pocketHelper = PocketHelper()
+    let toolbarIconSize: CGFloat = 18
+
     @IBAction func goForward() {
         if let hasNext = self.webView?.hasGitBookNextPage() {
             if hasNext {
@@ -48,8 +51,15 @@ class ElmViewController: UIViewController, UIWebViewDelegate {
             if let title: String = self.webView?.documentTitle(),
                 let url: URL = URL(string: urlString) {
 
-                let result = PocketHelper().pocket(title: title, url: url)
-                print("pocket result: \(result)")
+                if pocketHelper.hasPocket(url: url) {
+                    let result = pocketHelper.unpocket(title: title, url: url)
+                    print("unpocket result: \(result)")
+                } else {
+                    let result = pocketHelper.pocket(title: title, url: url)
+                    print("pocket result: \(result)")
+                }
+
+                self.updatePocketBtnIcon()
             }
         }
     }
@@ -133,6 +143,16 @@ class ElmViewController: UIViewController, UIWebViewDelegate {
         return elmTitle
     }
 
+    func updatePocketBtnIcon() -> Void {
+        var faType = FAType.FABookmarkO
+        if let url = self.url {
+            if pocketHelper.hasPocket(url: url) {
+                faType = FAType.FABookmark
+            }
+        }
+        self.pocketBtn?.setFAIcon(icon: faType, iconSize: toolbarIconSize, forState: .normal)
+    }
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -140,15 +160,13 @@ class ElmViewController: UIViewController, UIWebViewDelegate {
         // Do any a dditional setup after loading the view.
         self.updateButtons(force: true, enabled: false)
 
-        let toolbarIconSize: CGFloat = 25
+        self.indexBtn?.setFAIcon(icon: FAType.FAListUl, iconSize: toolbarIconSize, forState: .normal)
+        self.prevBtn?.setFAIcon(icon: FAType.FACaretLeft, iconSize: toolbarIconSize, forState: .normal)
+        self.nextBtn?.setFAIcon(icon: FAType.FACaretRight, iconSize: toolbarIconSize, forState: .normal)
+        self.scrollToBottomBtn?.setFAIcon(icon: FAType.FAHandODown, iconSize: toolbarIconSize, forState: .normal)
+        self.updatePocketBtnIcon()
 
-        self.indexBtn?.setFAIcon(icon: FAType.FAListUl, iconSize:toolbarIconSize, forState: .normal)
-        self.prevBtn?.setFAIcon(icon: FAType.FACaretLeft, iconSize:toolbarIconSize, forState: .normal)
-        self.nextBtn?.setFAIcon(icon: FAType.FACaretRight, iconSize:toolbarIconSize, forState: .normal)
-        self.pocketBtn?.setFAIcon(icon: FAType.FAGetPocket, iconSize:toolbarIconSize, forState: .normal)
-        self.scrollToBottomBtn?.setFAIcon(icon: FAType.FAHandODown, iconSize:toolbarIconSize, forState: .normal)
-
-        self.shareBtn?.setFAIcon(icon: FAType.FAShare, iconSize:25, forState: .normal)
+        self.shareBtn?.setFAIcon(icon: FAType.FAShare, iconSize: 18, forState: .normal)
     }
 
     override func viewWillAppear(_ animated: Bool) {

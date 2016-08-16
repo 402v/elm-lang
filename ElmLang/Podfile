@@ -10,6 +10,10 @@ target 'ElmLang' do
   #   :git => 'https://github.com/Alamofire/Alamofire.git',
   #   :branch => 'swift3'
 
+  # pod 'Font-Awesome-Swift',
+  #   :git => 'https://github.com/Vaberer/Font-Awesome-Swift.git',
+  #   :branch => 'swift-3'
+
   target 'ElmLangTests' do
     inherit! :search_paths
     # Pods for testing

@@ -19,12 +19,21 @@ class ReplViewController: UIViewController {
 
         // Do any additional setup after loading the view.
 //        self.webView?.scrollView.contentSize
+
+        UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue,
+                                  forKey: "orientation")
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         self.webView?.loadRequest(URLRequest(url: self.url!))
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+//        UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue,
+//                                  forKey: "orientation")
     }
 
     override var shouldAutorotate: Bool {
@@ -32,12 +41,12 @@ class ReplViewController: UIViewController {
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .landscape
-    }
-
-    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
         return .landscapeLeft
     }
+
+//    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+//        return .landscapeLeft
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

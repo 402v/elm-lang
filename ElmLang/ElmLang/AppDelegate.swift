@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     // MARK: - Rotate
-    var shouldSupportAllOrientation = false
+    var shouldSupportAllOrientation = true
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         if (shouldSupportAllOrientation == true){
             return UIInterfaceOrientationMask.all

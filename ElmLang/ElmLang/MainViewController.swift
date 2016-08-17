@@ -15,6 +15,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var playgroundsButton : UIButton?
     @IBOutlet weak var examplesButton : UIButton?
 
+    @IBOutlet weak var loadingMark : UIActivityIndicatorView?
+
     var pageList: [String: Page]?
     let pageHelper = PageHelper()
     let appConfigHelper = AppConfigHelper()
@@ -97,6 +99,8 @@ class MainViewController: UIViewController {
 
                             DispatchQueue.main.async {
                                 self.buttonsEnabled(enabled: true)
+
+                                self.loadingMark?.stopAnimating()
                             }
                         }
                     }
@@ -143,6 +147,11 @@ class MainViewController: UIViewController {
         self.pocketButton?.setFAText(prefixText: "", icon: FAType.FABookmarkO, postfixText: "  Pocket", size: iconSize, forState: .normal)
         self.playgroundsButton?.setFAText(prefixText: "", icon: FAType.FATerminal, postfixText: "  Playgrounds", size: iconSize, forState: .normal)
         self.examplesButton?.setFAText(prefixText: "", icon: FAType.FACode, postfixText: "  Examples", size: iconSize, forState: .normal)
+
+        self.getStartedButton?.setFAText(prefixText: "", icon: FAType.FAPlayCircle, postfixText: "  Get Started", size: iconSize, forState: .disabled)
+        self.pocketButton?.setFAText(prefixText: "", icon: FAType.FABookmarkO, postfixText: "  Pocket", size: iconSize, forState: .disabled)
+        self.playgroundsButton?.setFAText(prefixText: "", icon: FAType.FATerminal, postfixText: "  Playgrounds", size: iconSize, forState: .disabled)
+        self.examplesButton?.setFAText(prefixText: "", icon: FAType.FACode, postfixText: "  Examples", size: iconSize, forState: .disabled)
     }
 
     func buttonsEnabled(enabled: Bool) -> Void {

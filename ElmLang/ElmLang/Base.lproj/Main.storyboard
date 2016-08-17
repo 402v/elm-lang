@@ -54,17 +54,23 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="NrG-rb-UfQ">
+                                <color key="color" red="0.28601521600000002" green="0.28601521600000002" blue="0.28601521600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="NrG-rb-UfQ" firstAttribute="centerY" secondItem="28G-ty-ViO" secondAttribute="centerY" id="0zA-Jw-aJQ"/>
                             <constraint firstItem="28G-ty-ViO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="B5S-7s-4pA"/>
                             <constraint firstItem="28G-ty-ViO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aHh-dj-ebZ"/>
+                            <constraint firstItem="NrG-rb-UfQ" firstAttribute="centerX" secondItem="28G-ty-ViO" secondAttribute="centerX" id="nNY-vH-T7f"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Homepage" id="Hdx-nK-FO4"/>
                     <connections>
                         <outlet property="examplesButton" destination="omp-xr-qzd" id="cbB-n6-wdm"/>
                         <outlet property="getStartedButton" destination="l8T-TS-9F0" id="Mqq-44-iz1"/>
+                        <outlet property="loadingMark" destination="NrG-rb-UfQ" id="jaL-66-SVy"/>
                         <outlet property="playgroundsButton" destination="q4K-Ca-EMh" id="jdc-jF-agT"/>
                         <outlet property="pocketButton" destination="ccg-Sq-IYA" id="qMg-kK-9EH"/>
                     </connections>

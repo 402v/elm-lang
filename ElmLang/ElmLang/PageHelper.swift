@@ -8,6 +8,14 @@
 
 import UIKit
 
+
+enum PageIdentifier: String {
+    case getStarted = "GetStartedIdentifier"
+    case pocket = "PocketIdentifier"
+    case playgrounds = "PlaygroundsIdentifier"
+    case examples = "ExamplesIdentifier"
+}
+
 class PageHelper: NSObject {
     func parsePageList(data: Data?) -> [String: Page] {
         var jsonAry: Array<AnyObject>!
@@ -37,20 +45,20 @@ class PageHelper: NSObject {
         return pageList
     }
 
-    func pageURL(title: String?, pageList: [String: Page]) -> URL? {
+    func pageURL(of page: String?, pageList: [String: Page]) -> URL? {
 
         var url : URL?
 
-        switch title! {
-        case "Get Started":
+        switch page! {
+        case PageIdentifier.getStarted.rawValue:
             url = pageList["get_started"]!.location
             break
-        case "Pocket":
+        case PageIdentifier.pocket.rawValue:
             break
-        case "Playgrounds":
+        case PageIdentifier.playgrounds.rawValue:
             url = pageList["playgrounds"]!.location
             break
-        case "Examples":
+        case PageIdentifier.examples.rawValue:
             url = pageList["examples"]!.location
             break
         default:

@@ -22,15 +22,25 @@ class PocketViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "Pocket"
+
         // Do any additional setup after loading the view.
         if let flowLayout = self.pennyView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            // custom size
             if let width = UIApplication.shared.keyWindow?.frame.width {
                 flowLayout.itemSize = CGSize(width: width, height: 60)
                 flowLayout.invalidateLayout()
             }
+
+            flowLayout.scrollDirection = .vertical
+
+            // separator
+            flowLayout.register(PocketSeperatorView.self, forDecorationViewOfKind: "Separator")
+            flowLayout.minimumLineSpacing = 1;
         }
     }
 
+    // MARK: - Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 

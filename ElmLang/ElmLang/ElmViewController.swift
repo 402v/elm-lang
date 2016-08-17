@@ -28,6 +28,7 @@ class ElmViewController: UIViewController, UIWebViewDelegate {
         if let hasNext = self.webView?.hasGitBookNextPage() {
             if hasNext {
                 let _ = self.webView?.goNextGitBookPage()
+                self.updatePocketBtnIcon()
             }
         }
     }
@@ -36,6 +37,7 @@ class ElmViewController: UIViewController, UIWebViewDelegate {
         if let hasPrev = self.webView?.hasGitBookPrevPage() {
             if hasPrev {
                 let _ = self.webView?.goPrevGitBookPage()
+                self.updatePocketBtnIcon()
             }
         }
     }
@@ -57,6 +59,8 @@ class ElmViewController: UIViewController, UIWebViewDelegate {
                 } else {
                     let result = pocketHelper.pocket(title: title, url: url)
                     print("pocket result: \(result)")
+
+                    let _ = pocketHelper.pockets()
                 }
 
                 self.updatePocketBtnIcon()
@@ -209,75 +213,4 @@ class ElmViewController: UIViewController, UIWebViewDelegate {
     }
     */
 
-}
-
-extension UIWebView {
-    // MARK: - Index
-    func openGitBookIndex() -> String? {
-        return self.stringByEvaluatingJavaScript(from: ElmGuideJavascript.openIndexJS.rawValue)
-    }
-
-    func closeGitBookIndex() -> String? {
-        return self.stringByEvaluatingJavaScript(from: ElmGuideJavascript.closeIndexJS.rawValue)
-    }
-
-    func isGitBookIndexOpen() -> Bool? {
-        if let result: String = self.stringByEvaluatingJavaScript(from: ElmGuideJavascript.isIndexOpenJS.rawValue) {
-            return result == "true"
-        } else {
-            return nil
-        }
-    }
-
-    // MARK: - Page
-    func goNextGitBookPage() -> Bool {
-        if let nextHref = self.stringByEvaluatingJavaScript(from: ElmGuideJavascript.nextPageJS.rawValue) {
-
-            if let url = URL(string: nextHref) {
-                self.loadRequest(URLRequest(url: url))
-                return true
-            }
-        }
-
-        return false
-    }
-
-    func goPrevGitBookPage() -> Bool {
-        if let prevHref = self.stringByEvaluatingJavaScript(from: ElmGuideJavascript.prevPageJS.rawValue) {
-
-            if let url = URL(string: prevHref) {
-                self.loadRequest(URLRequest(url: url))
-                return true
-            }
-        }
-
-        return false
-    }
-
-    func hasGitBookPrevPage() -> Bool? {
-        if let result: String = self.stringByEvaluatingJavaScript(from: ElmGuideJavascript.hasPrevPageJS.rawValue) {
-            return result == "true"
-        } else {
-            return nil
-        }
-    }
-
-    func hasGitBookNextPage() -> Bool? {
-        if let result: String = self.stringByEvaluatingJavaScript(from: ElmGuideJavascript.hasNextPageJS.rawValue) {
-            return result == "true"
-        } else {
-            return nil
-        }
-    }
-
-    // MARK: - Scroll
-    func scrollGitBookToBottom() -> Bool {
-        if let hasNext: Bool = self.hasGitBookNextPage() {
-            if hasNext {
-                let _ = self.stringByEvaluatingJavaScript(from: ElmGuideJavascript.scrollToBottomJS.rawValue)
-                return true
-            }
-        }
-        return false
-    }
 }

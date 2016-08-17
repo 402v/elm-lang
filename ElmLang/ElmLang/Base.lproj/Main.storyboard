@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Elm-->
+        <!--Homepage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ElmLang" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,48 +18,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8T-TS-9F0">
-                                <state key="normal" title="Get Started"/>
-                                <connections>
-                                    <action selector="buttonClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dab-wd-zhi"/>
-                                    <segue destination="WBZ-86-flu" kind="show" identifier="GetStartedIdentifier" id="i98-js-hsQ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccg-Sq-IYA">
-                                <state key="normal" title="Pocket"/>
-                                <connections>
-                                    <action selector="buttonClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qqE-e3-Ogs"/>
-                                    <segue destination="fzQ-uq-B7O" kind="show" identifier="PocketIdentifier" id="WlV-5l-xlZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4K-Ca-EMh">
-                                <state key="normal" title="Playgrounds"/>
-                                <connections>
-                                    <action selector="buttonClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qAG-jG-aPH"/>
-                                    <segue destination="Jxp-Xf-Pzp" kind="show" identifier="PlaygroundsIdentifier" id="jM4-IE-PXT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omp-xr-qzd">
-                                <state key="normal" title="Examples"/>
-                                <connections>
-                                    <action selector="buttonClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TU6-uV-jRv"/>
-                                    <segue destination="Jxp-Xf-Pzp" kind="show" identifier="ExamplesIdentifier" id="VTg-8v-g0a"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="28G-ty-ViO">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8T-TS-9F0">
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <state key="normal" title="Get Started"/>
+                                        <connections>
+                                            <action selector="buttonClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dab-wd-zhi"/>
+                                            <segue destination="WBZ-86-flu" kind="show" identifier="GetStartedIdentifier" id="i98-js-hsQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccg-Sq-IYA">
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <state key="normal" title="Pocket"/>
+                                        <connections>
+                                            <action selector="buttonClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qqE-e3-Ogs"/>
+                                            <segue destination="fzQ-uq-B7O" kind="show" identifier="PocketIdentifier" id="WlV-5l-xlZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4K-Ca-EMh">
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <state key="normal" title="Playgrounds"/>
+                                        <connections>
+                                            <action selector="buttonClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qAG-jG-aPH"/>
+                                            <segue destination="Jxp-Xf-Pzp" kind="show" identifier="PlaygroundsIdentifier" id="jM4-IE-PXT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omp-xr-qzd">
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <state key="normal" title="Examples"/>
+                                        <connections>
+                                            <action selector="buttonClickedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TU6-uV-jRv"/>
+                                            <segue destination="Jxp-Xf-Pzp" kind="show" identifier="ExamplesIdentifier" id="VTg-8v-g0a"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="omp-xr-qzd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="27S-La-bDG"/>
-                            <constraint firstItem="omp-xr-qzd" firstAttribute="centerX" secondItem="q4K-Ca-EMh" secondAttribute="centerX" id="DSV-HY-bZx"/>
-                            <constraint firstItem="q4K-Ca-EMh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MPn-tR-Cah"/>
-                            <constraint firstItem="omp-xr-qzd" firstAttribute="top" secondItem="q4K-Ca-EMh" secondAttribute="bottom" constant="64" id="O4g-dZ-Q2i"/>
-                            <constraint firstItem="q4K-Ca-EMh" firstAttribute="top" secondItem="ccg-Sq-IYA" secondAttribute="bottom" constant="63" id="OZi-YR-HFn"/>
-                            <constraint firstItem="q4K-Ca-EMh" firstAttribute="centerX" secondItem="ccg-Sq-IYA" secondAttribute="centerX" id="RSh-b6-wAg"/>
-                            <constraint firstItem="q4K-Ca-EMh" firstAttribute="leading" secondItem="l8T-TS-9F0" secondAttribute="leading" id="lcv-rV-GXj"/>
-                            <constraint firstItem="ccg-Sq-IYA" firstAttribute="top" secondItem="l8T-TS-9F0" secondAttribute="bottom" constant="47" id="xms-s2-0cJ"/>
+                            <constraint firstItem="28G-ty-ViO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="B5S-7s-4pA"/>
+                            <constraint firstItem="28G-ty-ViO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aHh-dj-ebZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Elm" id="Hdx-nK-FO4"/>
+                    <navigationItem key="navigationItem" title="Homepage" id="Hdx-nK-FO4"/>
                     <connections>
                         <outlet property="examplesButton" destination="omp-xr-qzd" id="cbB-n6-wdm"/>
                         <outlet property="getStartedButton" destination="l8T-TS-9F0" id="Mqq-44-iz1"/>
@@ -69,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903" y="175"/>
+            <point key="canvasLocation" x="901.60000000000002" y="174.96251874062969"/>
         </scene>
         <!--Pocket View Controller-->
         <scene sceneID="eDV-x5-RPK">
@@ -85,18 +87,13 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T9C-4Z-VkO">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kkW-J0-vmY">
-                                    <size key="itemSize" width="375" height="60"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
+                                <collectionViewLayout key="collectionViewLayout" id="Ld6-Fo-sEg" customClass="PocketFlowLayout" customModule="ElmLang" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PennyCell" id="U5w-d2-7pT" customClass="PennyCollectionViewCell" customModule="ElmLang" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqH-V6-SzE">
@@ -121,6 +118,7 @@
                                             <constraint firstItem="cM6-nq-dQX" firstAttribute="leading" secondItem="wqH-V6-SzE" secondAttribute="leading" id="xRw-14-Uay"/>
                                             <constraint firstItem="wqH-V6-SzE" firstAttribute="bottom" secondItem="U5w-d2-7pT" secondAttribute="bottomMargin" id="xeH-hk-W57"/>
                                         </constraints>
+                                        <size key="customSize" width="375" height="62"/>
                                         <connections>
                                             <outlet property="titleLable" destination="cM6-nq-dQX" id="q0N-Fu-aMc"/>
                                             <outlet property="urlLabel" destination="wqH-V6-SzE" id="BdA-Hi-QG1"/>
@@ -143,7 +141,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="pennyView" destination="T9C-4Z-VkO" id="kOM-Db-gQz"/>
+                        <outlet property="pennyView" destination="T9C-4Z-VkO" id="HNy-Gh-rMq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHs-mK-WlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -299,7 +297,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrY-J8-saS">
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                                 <connections>
                                     <outlet property="delegate" destination="WBZ-86-flu" id="c0e-SB-SYd"/>
@@ -403,7 +401,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VdA-8x-cOT"/>
         <segue reference="jM4-IE-PXT"/>
+        <segue reference="i98-js-hsQ"/>
     </inferredMetricsTieBreakers>
 </document>

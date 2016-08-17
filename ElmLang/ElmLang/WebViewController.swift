@@ -52,7 +52,26 @@ class WebViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    // MARK: - Rotate
+    override var shouldAutorotate: Bool {
+        get { return false }
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        get { return .portrait }
+    }
+
+    // MARK: - WebView
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        return true
+    }
+
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        if let title: String = webView.documentTitle() {
+            self.navigationItem.title = title
+        }
+    }
 
     /*
     // MARK: - Navigation

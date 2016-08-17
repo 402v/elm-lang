@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReplViewController: UIViewController {
+class ReplViewController: UIViewController, UIWebViewDelegate {
 
     var url : URL?
 
@@ -52,7 +52,17 @@ class ReplViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+    // MARK: - WebView
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        return true
+    }
+
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        if let title: String = webView.documentTitle() {
+            self.navigationItem.title = title
+        }
+    }
 
     /*
     // MARK: - Navigation

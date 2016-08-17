@@ -6,6 +6,9 @@ target 'ElmLang' do
   use_frameworks!
 
   # Pods for ElmLang
+
+  # pod 'SwiftHEXColors'
+
   # pod 'Alamofire',
   #   :git => 'https://github.com/Alamofire/Alamofire.git',
   #   :branch => 'swift3'

@@ -9,10 +9,13 @@
 import UIKit
 
 class NetworkHelper: NSObject {
+
+    let baseURL = "http://private-6adc49-elmapp.apiary-mock.com"
+
     func fetchURLLocations(callback: (Data?, Error?) -> Void) {
 
-        // 获取Url --- 这个是我获取的天气预报接口，时间久了可能就会失效
-        let url = URL(string: "http://private-6adc49-elmapp.apiary-mock.com/locations")!
+        // 获取Url
+        let url = URL(string: "\(baseURL)/locations")!
         // 转换为requset
         let request = URLRequest(url: url)
         //NSURLSession 对象都由一个 NSURLSessionConfiguration 对象来进行初始化，后者指定了刚才提到的那些策略以及一些用来增强移动设备上性能的新选项
@@ -30,6 +33,42 @@ class NetworkHelper: NSObject {
         }
 
         // 启动任务
+        task.resume()
+    }
+
+    func fetchAppConfigs(callback: (Data?, Error?) -> Void) {
+        let url = URL(string: "\(baseURL)/configs")!
+        let request = URLRequest(url: url)
+        let configuration = URLSessionConfiguration.default
+        let session = URLSession(configuration: configuration)
+
+        let task = session.dataTask(with: request) {
+            (data, response, error) -> Void in
+            if error != nil {
+                callback(nil, error)
+            } else {
+                callback(data, nil)
+            }
+        }
+
+        task.resume()
+    }
+
+    func fetchJavascripts(callback: (Data?, Error?) -> Void) {
+        let url = URL(string: "\(baseURL)/scripts")!
+        let request = URLRequest(url: url)
+        let configuration = URLSessionConfiguration.default
+        let session = URLSession(configuration: configuration)
+
+        let task = session.dataTask(with: request) {
+            (data, response, error) -> Void in
+            if error != nil {
+                callback(nil, error)
+            } else {
+                callback(data, nil)
+            }
+        }
+
         task.resume()
     }
 }

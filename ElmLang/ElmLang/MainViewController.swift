@@ -17,6 +17,8 @@ class MainViewController: UIViewController {
 
     var pageList: [String: Page]?
     let pageHelper = PageHelper()
+    let appConfigHelper = AppConfigHelper()
+    let networkHelper = NetworkHelper()
 
     var hasAppear: Bool = false
 
@@ -26,28 +28,30 @@ class MainViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-        let button = sender as! UIButton
-        let title = button.titleLabel?.text
-        let url = self.pageHelper.pageURL(title: title, pageList: self.pageList!)
 
-        switch segue.identifier! {
-        case "GetStartedIdentifier":
-            let elmVC = segue.destination as! ElmViewController
-            elmVC.url = url
-            break
-        case "PocketIdentifier":
-            _ = segue.destination as! PocketViewController
-            break
-        case "PlaygroundsIdentifier":
-            let replVC = segue.destination as! ReplViewController
-            replVC.url = url
-            break
-        case "ExamplesIdentifier":
-            let replVC = segue.destination as! ReplViewController
-            replVC.url = url
-            break
-        default:
-            break
+        let url = self.pageHelper.pageURL(of: segue.identifier!, pageList: self.pageList!)
+
+        if let page = segue.identifier {
+
+            switch page {
+            case PageIdentifier.getStarted.rawValue:
+                let elmVC = segue.destination as! ElmViewController
+                elmVC.url = url
+                break
+            case PageIdentifier.pocket.rawValue:
+                _ = segue.destination as! PocketViewController
+                break
+            case PageIdentifier.playgrounds.rawValue:
+                let replVC = segue.destination as! ReplViewController
+                replVC.url = url
+                break
+            case PageIdentifier.examples.rawValue:
+                let replVC = segue.destination as! ReplViewController
+                replVC.url = url
+                break
+            default:
+                break
+            }
         }
     }
 
@@ -65,17 +69,46 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+        buttonsUpdate()
         buttonsEnabled(enabled: false)
-        
-        NetworkHelper().fetchURLLocations() {
-            (data, error)->Void in
+
+        self.networkHelper.fetchAppConfigs() {
+            (data, error) -> Void in
+
             if error != nil {
                 print(error)
             } else {
-                self.pageList = self.pageHelper.parsePageList(data: data)
+                self.appConfigHelper.parseAppConfigs(data: data)
 
-                DispatchQueue.main.async {
-                    self.buttonsEnabled(enabled: true)
+                if self.appConfigHelper.shutdown {
+                    if let shutdownReason = self.appConfigHelper.shutdownReason {
+                        DispatchQueue.main.async {
+                            let alert = UIAlertController(title: "Shutdown", message: shutdownReason, preferredStyle: UIAlertControllerStyle.alert)
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                    }
+                } else {
+                    self.networkHelper.fetchURLLocations() {
+                        (data, error)->Void in
+                        if error != nil {
+                            print(error)
+                        } else {
+                            self.pageList = self.pageHelper.parsePageList(data: data)
+
+                            DispatchQueue.main.async {
+                                self.buttonsEnabled(enabled: true)
+                            }
+                        }
+                    }
+
+                    self.networkHelper.fetchJavascripts() {
+                        ( data, error ) -> Void in
+                        if error != nil {
+                            print(error)
+                        } else {
+                            JavascriptHelper.sharedInstance.parseJavascripts(data: data)
+                        }
+                    }
                 }
             }
         }
@@ -99,6 +132,17 @@ class MainViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    // MARK: - private
+    func buttonsUpdate() -> Void {
+
+        let iconSize: CGFloat = 25
+
+        self.getStartedButton?.setFAText(prefixText: "", icon: FAType.FAPlayCircle, postfixText: "  Get Started", size: iconSize, forState: .normal)
+        self.pocketButton?.setFAText(prefixText: "", icon: FAType.FABookmarkO, postfixText: "  Pocket", size: iconSize, forState: .normal)
+        self.playgroundsButton?.setFAText(prefixText: "", icon: FAType.FATerminal, postfixText: "  Playgrounds", size: iconSize, forState: .normal)
+        self.examplesButton?.setFAText(prefixText: "", icon: FAType.FACode, postfixText: "  Examples", size: iconSize, forState: .normal)
     }
 
     func buttonsEnabled(enabled: Bool) -> Void {

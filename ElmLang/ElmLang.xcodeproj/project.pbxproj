@@ -12,6 +12,10 @@
 		CB3F44A01D61F94900CEB231 /* JavascriptHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F449F1D61F94900CEB231 /* JavascriptHelper.swift */; };
 		CB3F44A71D636B2100CEB231 /* FAIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F44A31D6218F700CEB231 /* FAIcon.swift */; };
 		CB3F44A81D636B2100CEB231 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB3F44A41D6218F700CEB231 /* FontAwesome.ttf */; };
+		CB3F44AD1D64179200CEB231 /* PocketSeperatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F44AC1D64179200CEB231 /* PocketSeperatorView.swift */; };
+		CB3F44AF1D641A2300CEB231 /* PocketFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F44AE1D641A2300CEB231 /* PocketFlowLayout.swift */; };
+		CB6FB99E1D648E860072A068 /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FB99D1D648E860072A068 /* SwiftHEXColors.swift */; };
+		CB6FB9A31D64B9000072A068 /* AppConfigHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FB9A21D64B9000072A068 /* AppConfigHelper.swift */; };
 		CB921B2E1D5F9124008C025E /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B2D1D5F9124008C025E /* NetworkHelper.swift */; };
 		CB921B301D5F98DC008C025E /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B2F1D5F98DC008C025E /* Page.swift */; };
 		CB921B341D601698008C025E /* ElmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB921B331D601698008C025E /* ElmViewController.swift */; };
@@ -62,6 +66,10 @@
 		CB3F449F1D61F94900CEB231 /* JavascriptHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavascriptHelper.swift; sourceTree = "<group>"; };
 		CB3F44A31D6218F700CEB231 /* FAIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAIcon.swift; sourceTree = "<group>"; };
 		CB3F44A41D6218F700CEB231 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		CB3F44AC1D64179200CEB231 /* PocketSeperatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketSeperatorView.swift; sourceTree = "<group>"; };
+		CB3F44AE1D641A2300CEB231 /* PocketFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketFlowLayout.swift; sourceTree = "<group>"; };
+		CB6FB99D1D648E860072A068 /* SwiftHEXColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHEXColors.swift; sourceTree = "<group>"; };
+		CB6FB9A21D64B9000072A068 /* AppConfigHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfigHelper.swift; sourceTree = "<group>"; };
 		CB921B2D1D5F9124008C025E /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		CB921B2F1D5F98DC008C025E /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		CB921B331D601698008C025E /* ElmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElmViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +144,7 @@
 		CB3F44A11D6218F700CEB231 /* CustomPods */ = {
 			isa = PBXGroup;
 			children = (
+				CB6FB99C1D648E860072A068 /* SwiftHEXColors */,
 				CB3F44A21D6218F700CEB231 /* Font-Awesome-Swift */,
 			);
 			path = CustomPods;
@@ -150,6 +159,23 @@
 			path = "Font-Awesome-Swift";
 			sourceTree = "<group>";
 		};
+		CB3F44AB1D64175D00CEB231 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				CB3F44AC1D64179200CEB231 /* PocketSeperatorView.swift */,
+				CB3F44AE1D641A2300CEB231 /* PocketFlowLayout.swift */,
+			);
+			name = components;
+			sourceTree = "<group>";
+		};
+		CB6FB99C1D648E860072A068 /* SwiftHEXColors */ = {
+			isa = PBXGroup;
+			children = (
+				CB6FB99D1D648E860072A068 /* SwiftHEXColors.swift */,
+			);
+			path = SwiftHEXColors;
+			sourceTree = "<group>";
+		};
 		CB921B311D5F98E2008C025E /* models */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +185,7 @@
 			name = models;
 			sourceTree = "<group>";
 		};
-		CB921B321D601678008C025E /* view */ = {
+		CB921B321D601678008C025E /* views */ = {
 			isa = PBXGroup;
 			children = (
 				CB921B331D601698008C025E /* ElmViewController.swift */,
@@ -167,7 +193,7 @@
 				CB921B391D603AD6008C025E /* ReplViewController.swift */,
 				CB921B3B1D60B909008C025E /* WebViewController.swift */,
 			);
-			name = view;
+			name = views;
 			sourceTree = "<group>";
 		};
 		CB921B451D60E59A008C025E /* Bridge */ = {
@@ -204,9 +230,10 @@
 		CBD52F7F1D5F804100ED3BB6 /* ElmLang */ = {
 			isa = PBXGroup;
 			children = (
+				CB3F44AB1D64175D00CEB231 /* components */,
 				CB3F44A11D6218F700CEB231 /* CustomPods */,
 				CB921B451D60E59A008C025E /* Bridge */,
-				CB921B321D601678008C025E /* view */,
+				CB921B321D601678008C025E /* views */,
 				CB921B311D5F98E2008C025E /* models */,
 				CBD52FAE1D5F827B00ED3BB6 /* controllers */,
 				CBD52F801D5F804100ED3BB6 /* AppDelegate.swift */,
@@ -246,6 +273,7 @@
 				CB921B3F1D60C62A008C025E /* ShareHelper.swift */,
 				CB921B431D60D58B008C025E /* FileHelper.swift */,
 				CB3F449F1D61F94900CEB231 /* JavascriptHelper.swift */,
+				CB6FB9A21D64B9000072A068 /* AppConfigHelper.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -538,10 +566,14 @@
 				CB921B381D6039C8008C025E /* PocketViewController.swift in Sources */,
 				CB921B441D60D58B008C025E /* FileHelper.swift in Sources */,
 				CB3F44A01D61F94900CEB231 /* JavascriptHelper.swift in Sources */,
+				CB6FB9A31D64B9000072A068 /* AppConfigHelper.swift in Sources */,
+				CB3F44AD1D64179200CEB231 /* PocketSeperatorView.swift in Sources */,
 				CB921B421D60D2DC008C025E /* Penny.swift in Sources */,
 				CB3F44A71D636B2100CEB231 /* FAIcon.swift in Sources */,
 				CB921B361D601D9A008C025E /* PageHelper.swift in Sources */,
 				CB921B481D60E5CD008C025E /* Objective-C.m in Sources */,
+				CB6FB99E1D648E860072A068 /* SwiftHEXColors.swift in Sources */,
+				CB3F44AF1D641A2300CEB231 /* PocketFlowLayout.swift in Sources */,
 				CB921B301D5F98DC008C025E /* Page.swift in Sources */,
 				CB921B3A1D603AD6008C025E /* ReplViewController.swift in Sources */,
 				CB921B401D60C62A008C025E /* ShareHelper.swift in Sources */,

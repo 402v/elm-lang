@@ -1,11 +1,17 @@
-# elm-lang
+
+# App Icon Generator
+
+https://makeappicon.com
+
+# App Store Description
+## elm-lang
 Tutorial for elm language.
 
 Learning elm language on iOS with great user experience,.
 
 elm - the best of functional programming in your browser.
 
-#Features
+## Features
 
 * Reading elm gitbooks on iOS
 * Pocket to save your learning progress

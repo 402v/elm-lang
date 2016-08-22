@@ -124,6 +124,7 @@ class MainViewController: UIViewController {
         if hasAppear {
             UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue,
                                       forKey: "orientation")
+
         }
     }
 

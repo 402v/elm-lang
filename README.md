@@ -1,7 +1,10 @@
 
-# App Icon Generator
+# Useful Links
 
-https://makeappicon.com
+[App Icons](https://makeappicon.com)
+[Font Awesome](http://fontawesome.io/icons/)
+[ElmLang API](https://app.apiary.io/elmapp/editor)
+[iTunes Connect](https://itunesconnect.apple.com)
 
 # App Store Description
 ## elm-lang

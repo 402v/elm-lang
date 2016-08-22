@@ -12,6 +12,11 @@ class WebViewController: UIViewController {
 
     var url : URL?
 
+    @IBOutlet weak var backBtn: UIButton?
+    @IBOutlet weak var forwardBtn: UIButton?
+    @IBOutlet weak var refreshBtn: UIButton?
+    @IBOutlet weak var openInSafariBtn: UIButton?
+
     @IBOutlet weak var webView: UIWebView?
 
     @IBAction func goForward() {
@@ -32,14 +37,24 @@ class WebViewController: UIViewController {
         }
     }
 
-    @IBAction func pocket() {
-        // 
+    @IBAction func openInSafari() {
+        if let url = self.url {
+            UIApplication.shared.openURL(url)
+        }
     }
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.updateButtons(force: true, enable: false)
+
+        let iconSize: CGFloat = 18
+        self.backBtn?.setFAIcon(icon: FAType.FAAngleLeft, iconSize: iconSize, forState: .normal)
+        self.forwardBtn?.setFAIcon(icon: FAType.FAAngleRight, iconSize: iconSize, forState: .normal)
+        self.refreshBtn?.setFAIcon(icon: FAType.FASpinner, iconSize: iconSize, forState: .normal)
+        self.openInSafariBtn?.setFAIcon(icon: FAType.FASafari, iconSize: iconSize, forState: .normal)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +66,23 @@ class WebViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    // MARK: - private
+    func updateButtons(force: Bool, enable: Bool) -> Void {
+        if force {
+            self.backBtn?.isEnabled = (self.webView?.canGoBack)! && enable
+            self.forwardBtn?.isEnabled = (self.webView?.canGoForward)! && enable
+
+            self.refreshBtn?.isEnabled = enable
+            self.openInSafariBtn?.isEnabled = enable
+        } else {
+            self.backBtn?.isEnabled = (self.webView?.canGoBack)!
+            self.forwardBtn?.isEnabled = (self.webView?.canGoForward)!
+
+            self.refreshBtn?.isEnabled = true
+            self.openInSafariBtn?.isEnabled = true
+        }
     }
 
     // MARK: - Rotate
@@ -71,6 +103,11 @@ class WebViewController: UIViewController {
         if let title: String = webView.documentTitle() {
             self.navigationItem.title = title
         }
+        if let url = webView.documentURL() {
+            self.url = URL(string: url)
+        }
+
+        self.updateButtons(force: false, enable: true)
     }
 
     /*

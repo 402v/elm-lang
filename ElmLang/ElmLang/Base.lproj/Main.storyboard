@@ -174,33 +174,33 @@
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4TZ-Ik-EDJ">
                                 <items>
-                                    <barButtonItem style="plain" id="7Oy-h8-htC">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SvR-aq-zUq">
-                                            <rect key="frame" x="16" y="11" width="22" height="22"/>
+                                    <barButtonItem style="plain" id="iR8-kW-8UA">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g98-zn-ABk">
+                                            <rect key="frame" x="16" y="7" width="46" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="F"/>
+                                            <state key="normal" title="Ba"/>
                                             <connections>
-                                                <action selector="goForward" destination="4iC-Oi-Eo6" eventType="touchUpInside" id="EG6-s0-dkx"/>
+                                                <action selector="goBack" destination="4iC-Oi-Eo6" eventType="touchUpInside" id="Tx7-8W-EMq"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fSf-Pp-O7x"/>
-                                    <barButtonItem style="plain" id="iR8-kW-8UA">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g98-zn-ABk">
-                                            <rect key="frame" x="99" y="7" width="46" height="30"/>
+                                    <barButtonItem style="plain" id="7Oy-h8-htC">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SvR-aq-zUq">
+                                            <rect key="frame" x="126" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="B"/>
+                                            <state key="normal" title="Fo"/>
                                             <connections>
-                                                <action selector="goBack" destination="4iC-Oi-Eo6" eventType="touchUpInside" id="Tx7-8W-EMq"/>
+                                                <action selector="goForward" destination="4iC-Oi-Eo6" eventType="touchUpInside" id="EG6-s0-dkx"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="2gR-AE-UNA"/>
                                     <barButtonItem style="plain" id="wbr-d2-kIG">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="W2l-Bj-Lbj">
-                                            <rect key="frame" x="206" y="7" width="46" height="30"/>
+                                            <rect key="frame" x="219" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="R"/>
+                                            <state key="normal" title="Re"/>
                                             <connections>
                                                 <action selector="refresh" destination="4iC-Oi-Eo6" eventType="touchUpInside" id="TEy-To-8Ao"/>
                                             </connections>
@@ -211,9 +211,9 @@
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sjV-kK-0dU">
                                             <rect key="frame" x="313" y="7" width="46" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Save"/>
+                                            <state key="normal" title="Sa"/>
                                             <connections>
-                                                <action selector="pocket" destination="4iC-Oi-Eo6" eventType="touchUpInside" id="Xbm-2h-DyD"/>
+                                                <action selector="openInSafari" destination="4iC-Oi-Eo6" eventType="touchUpInside" id="Z68-6H-wOV"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -232,6 +232,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backBtn" destination="g98-zn-ABk" id="eZC-xy-Bff"/>
+                        <outlet property="forwardBtn" destination="SvR-aq-zUq" id="R9a-6Z-p8q"/>
+                        <outlet property="openInSafariBtn" destination="sjV-kK-0dU" id="uP1-TC-2An"/>
+                        <outlet property="refreshBtn" destination="W2l-Bj-Lbj" id="vPw-AA-CSd"/>
                         <outlet property="webView" destination="bWY-KV-5V3" id="jbb-9W-kOg"/>
                     </connections>
                 </viewController>

@@ -27,8 +27,10 @@ class ElmViewController: UIViewController, UIWebViewDelegate {
     @IBAction func goForward() {
         if let hasNext = self.webView?.hasGitBookNextPage() {
             if hasNext {
-                let _ = self.webView?.goNextGitBookPage()
-                self.updatePocketBtnIcon()
+                if self.webView?.goNextGitBookPage() != nil {
+                    self.updateButtons(force: true, enabled: false)
+                    self.pocketBtn?.setFAIcon(icon: FAType.FABookmarkO, iconSize: toolbarIconSize, forState: .normal)
+                }
             }
         }
     }
@@ -36,8 +38,10 @@ class ElmViewController: UIViewController, UIWebViewDelegate {
     @IBAction func goBack() {
         if let hasPrev = self.webView?.hasGitBookPrevPage() {
             if hasPrev {
-                let _ = self.webView?.goPrevGitBookPage()
-                self.updatePocketBtnIcon()
+                if self.webView?.goPrevGitBookPage() != nil {
+                    self.updateButtons(force: true, enabled: false)
+                    self.pocketBtn?.setFAIcon(icon: FAType.FABookmarkO, iconSize: toolbarIconSize, forState: .normal)
+                }
             }
         }
     }
@@ -108,6 +112,7 @@ class ElmViewController: UIViewController, UIWebViewDelegate {
             self.navigationItem.title = self.neatlyTitleFor(elmTitle: title)
         }
         self.updateButtons(force: false, enabled: true)
+        self.updatePocketBtnIcon()
     }
 
     // MARK: - private

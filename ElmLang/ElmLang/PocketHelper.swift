@@ -56,6 +56,8 @@ class PocketHelper: NSObject {
 
                 // remove from memory
                 let _ = self.pennyHash?.removeValue(forKey: url)
+
+                return true
             }
         }
 

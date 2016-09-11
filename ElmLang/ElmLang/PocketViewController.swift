@@ -15,11 +15,18 @@ class PocketViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var editBtn: UIButton?
 
     let reuseIdentifier = "PennyCell"
+    let pocketHelper = PocketHelper()
 
     var pennyList: [Penny] = PocketHelper().pockets()
     var selectPenny: Penny?
 
     var hasAppear: Bool = false
+
+    override var editButtonItem: UIBarButtonItem {
+        let item = super.editButtonItem
+        item.title = "Delete"
+        return item
+    }
 
     // MARK: - Actions
     override func setEditing(_ editing: Bool, animated: Bool) {
@@ -43,8 +50,17 @@ class PocketViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     func deleteFromDataSource(by indexPaths: [IndexPath]) -> Bool {
         for indexPath in indexPaths {
-            self.pennyList.remove(at: indexPath.row)
+
+            if indexPath.row < self.pennyList.count {
+                let penny = self.pennyList[indexPath.row]
+
+                if pocketHelper.unpocket(title: penny.title!, url: penny.url!) {
+                    self.pennyList.remove(at: indexPath.row)
+                }
+            }
         }
+
+        let _ = pocketHelper.pockets()
         return true
     }
 

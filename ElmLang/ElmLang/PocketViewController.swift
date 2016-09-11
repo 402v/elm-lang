@@ -12,6 +12,8 @@ class PocketViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     @IBOutlet weak var pennyView : UICollectionView?
 
+    @IBOutlet weak var editBtn: UIButton?
+
     let reuseIdentifier = "PennyCell"
 
     var pennyList: [Penny] = PocketHelper().pockets()
@@ -19,10 +21,40 @@ class PocketViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     var hasAppear: Bool = false
 
+    // MARK: - Actions
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        if editing == false {
+            // delete selected items
+            self.pennyView?.performBatchUpdates({
+                if let selectedIndexPaths = self.pennyView?.indexPathsForSelectedItems {
+                    if self.deleteFromDataSource(by: selectedIndexPaths) == true {
+                        self.pennyView?.deleteItems(at: selectedIndexPaths)
+                    } else {
+                        print("delete failed!")
+                    }
+                }
+            }, completion: nil)
+        }
+
+        self.pennyView?.allowsMultipleSelection = editing
+
+        super.setEditing(editing, animated: animated)
+    }
+
+    func deleteFromDataSource(by indexPaths: [IndexPath]) -> Bool {
+        for indexPath in indexPaths {
+            self.pennyList.remove(at: indexPath.row)
+        }
+        return true
+    }
+
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Pocket"
+
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
 
         // Do any additional setup after loading the view.
         if let flowLayout = self.pennyView?.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -40,7 +72,6 @@ class PocketViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
     }
 
-    // MARK: - Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -61,7 +92,7 @@ class PocketViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
 
     // MARK: - Segue
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         switch segue.identifier! {
         case "PocketDetailIdentifier":
@@ -71,6 +102,11 @@ class PocketViewController: UIViewController, UICollectionViewDataSource, UIColl
         default:
             break
         }
+    }
+
+    open override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//    open func shouldPerformSegue(withIdentifier identifier: String, sender: AnyObject?) -> Bool {
+        return !self.isEditing
     }
 
     // MARK: - Rotate
@@ -116,12 +152,19 @@ class PocketViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
+
+        if isEditing == true {
+            let cell = collectionView.cellForItem(at: indexPath)
+            cell?.backgroundColor = UIColor.init(hexString: "eff0f1")
+
+            print("Cell: \(indexPath) as been selected: \(cell?.isSelected)")
+        }
     }
 
     // change background color when user touches cell
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor = UIColor.init(colorLiteralRed: 0.937, green: 0.941, blue: 0.945, alpha: 1.00) // eff0f1
+        cell?.backgroundColor = UIColor.init(hexString: "eff0f1")
     }
 
     // change background color back when user releases touch

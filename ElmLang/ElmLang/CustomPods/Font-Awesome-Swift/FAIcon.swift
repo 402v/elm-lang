@@ -329,14 +329,14 @@ private class FontLoader {
 
                 if identifier?.hasPrefix("org.cocoapods") == true {
 
-                    fontURL = bundle.url(forResource: FAStruct.FontName, withExtension: "ttf", subdirectory: "Font-Awesome-Swift.bundle")!
+                    fontURL = bundle.url(forResource: FAStruct.FontName, withExtension: "ttf", subdirectory: "Font-Awesome-Swift.bundle")! as NSURL
                 } else {
 
-                    fontURL = bundle.url(forResource: FAStruct.FontName, withExtension: "ttf")!
+                    fontURL = bundle.url(forResource: FAStruct.FontName, withExtension: "ttf")! as NSURL
                 }
                 let data = try! Data(contentsOf: fontURL as URL)
 
-                let provider = CGDataProvider(data: data)
+                let provider = CGDataProvider(data: data as CFData)
                 let font = CGFont(provider!)
 
                 var error: Unmanaged<CFError>?

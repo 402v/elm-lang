@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11191" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uWd-pa-gVl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11191" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uWd-pa-gVl">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11156"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -146,6 +146,7 @@
                             <constraint firstAttribute="trailing" secondItem="T9C-4Z-VkO" secondAttribute="trailing" id="hcj-0j-Jgb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="nSw-ws-F9R"/>
                     <connections>
                         <outlet property="pennyView" destination="T9C-4Z-VkO" id="HNy-Gh-rMq"/>
                     </connections>
@@ -411,7 +412,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="VdA-8x-cOT"/>
         <segue reference="jM4-IE-PXT"/>
-        <segue reference="i98-js-hsQ"/>
     </inferredMetricsTieBreakers>
 </document>

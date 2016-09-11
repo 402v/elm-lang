@@ -63,7 +63,7 @@ class PocketFlowLayout: UICollectionViewFlowLayout {
             let count = collectionView.dataSource?.collectionView(collectionView, numberOfItemsInSection: 0)
 
             for i in stride(from: max(firstCellIndexToShow, 0), to: lastCellIndexToShow, by: 1) {
-                if i < count {
+                if i < count! {
                     indexPaths.append(IndexPath(row: i, section: 0))
                 }
             }

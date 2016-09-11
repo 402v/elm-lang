@@ -16,7 +16,7 @@ class ShareHelper: NSObject {
                          sourceView: UIView) -> Void {
 
         /// 分享文字图片信息，ipad上会以sourceView为焦点弹出选择视图
-        let objectsToShare = [text, url, image]
+        let objectsToShare = [text, url, image] as [Any]
         let activityViewController = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
         if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone {
             hostVC.present(activityViewController, animated: true, completion: nil)

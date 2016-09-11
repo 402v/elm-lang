@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
 //        appdelegate.shouldSupportAllOrientation = true
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         let url = self.pageHelper.pageURL(of: segue.identifier!, pageList: self.pageList!)
 
@@ -164,12 +164,12 @@ class MainViewController: UIViewController {
 }
 
 extension UINavigationController {
-    public override var shouldAutorotate: Bool {
+    open override var shouldAutorotate: Bool {
         guard let viewCtrl = self.visibleViewController else { return true }
         return viewCtrl.shouldAutorotate
     }
 
-    public override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         guard let viewCtrl = self.visibleViewController else { return .all }
         return viewCtrl.supportedInterfaceOrientations
     }

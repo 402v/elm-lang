@@ -12,7 +12,7 @@ class NetworkHelper: NSObject {
 
     let baseURL = "http://private-6adc49-elmapp.apiary-mock.com"
 
-    func fetchURLLocations(callback: (Data?, Error?) -> Void) {
+    func fetchURLLocations(callback: @escaping (Data?, Error?) -> Void) {
 
         // 获取Url
         let url = URL(string: "\(baseURL)/locations")!
@@ -36,7 +36,7 @@ class NetworkHelper: NSObject {
         task.resume()
     }
 
-    func fetchAppConfigs(callback: (Data?, Error?) -> Void) {
+    func fetchAppConfigs(callback: @escaping (Data?, Error?) -> Void) {
         let url = URL(string: "\(baseURL)/configs")!
         let request = URLRequest(url: url)
         let configuration = URLSessionConfiguration.default
@@ -54,7 +54,7 @@ class NetworkHelper: NSObject {
         task.resume()
     }
 
-    func fetchJavascripts(callback: (Data?, Error?) -> Void) {
+    func fetchJavascripts(callback: @escaping (Data?, Error?) -> Void) {
         let url = URL(string: "\(baseURL)/scripts")!
         let request = URLRequest(url: url)
         let configuration = URLSessionConfiguration.default

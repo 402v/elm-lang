@@ -35,6 +35,7 @@
 		CBD52F8B1D5F804100ED3BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD52F891D5F804100ED3BB6 /* LaunchScreen.storyboard */; };
 		CBD52F961D5F804100ED3BB6 /* ElmLangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD52F951D5F804100ED3BB6 /* ElmLangTests.swift */; };
 		CBD52FA11D5F804100ED3BB6 /* ElmLangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD52FA01D5F804100ED3BB6 /* ElmLangUITests.swift */; };
+		CBDF063A1D8EA00E0015432C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBDF063C1D8EA00E0015432C /* Localizable.strings */; };
 		E1F87A2924F3E9AB86B6FCB1 /* Pods_ElmLang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D78D15A7FB6C70BF4EE6D3F /* Pods_ElmLang.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		CBD52F9C1D5F804100ED3BB6 /* ElmLangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElmLangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD52FA01D5F804100ED3BB6 /* ElmLangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElmLangUITests.swift; sourceTree = "<group>"; };
 		CBD52FA21D5F804100ED3BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBDF063B1D8EA00E0015432C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DAB09A02F58E4565E8516881 /* Pods-ElmLangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElmLangUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ElmLangUITests/Pods-ElmLangUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC699B2259A238745E027E88 /* Pods-ElmLang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElmLang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ElmLang/Pods-ElmLang.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -242,6 +244,7 @@
 				CBD52F871D5F804100ED3BB6 /* Assets.xcassets */,
 				CBD52F891D5F804100ED3BB6 /* LaunchScreen.storyboard */,
 				CBD52F8C1D5F804100ED3BB6 /* Info.plist */,
+				CBDF063C1D8EA00E0015432C /* Localizable.strings */,
 			);
 			path = ElmLang;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 			files = (
 				CBD52F8B1D5F804100ED3BB6 /* LaunchScreen.storyboard in Resources */,
 				CBD52F881D5F804100ED3BB6 /* Assets.xcassets in Resources */,
+				CBDF063A1D8EA00E0015432C /* Localizable.strings in Resources */,
 				CBD52F861D5F804100ED3BB6 /* Main.storyboard in Resources */,
 				CB3F44A81D636B2100CEB231 /* FontAwesome.ttf in Resources */,
 			);
@@ -629,6 +633,14 @@
 				CBD52F8A1D5F804100ED3BB6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CBDF063C1D8EA00E0015432C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBDF063B1D8EA00E0015432C /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

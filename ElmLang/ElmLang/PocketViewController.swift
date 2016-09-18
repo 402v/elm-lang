@@ -24,12 +24,15 @@ class PocketViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     override var editButtonItem: UIBarButtonItem {
         let item = super.editButtonItem
-        item.title = "Delete"
+        item.title = NSLocalizedString("delete", comment: "")
         return item
     }
 
     // MARK: - Actions
     override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+
+        let item = super.editButtonItem
         if editing == false {
             // delete selected items
             self.pennyView?.performBatchUpdates({
@@ -41,11 +44,13 @@ class PocketViewController: UIViewController, UICollectionViewDataSource, UIColl
                     }
                 }
             }, completion: nil)
+
+            item.title = NSLocalizedString("delete", comment: "")
+        } else {
+            item.title = NSLocalizedString("done", comment: "")
         }
 
         self.pennyView?.allowsMultipleSelection = editing
-
-        super.setEditing(editing, animated: animated)
     }
 
     func deleteFromDataSource(by indexPaths: [IndexPath]) -> Bool {
